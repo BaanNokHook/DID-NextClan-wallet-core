@@ -45,23 +45,38 @@ Proto::SigningOutput Signer::sign(const TW::PrivateKey &privateKey, Transaction 
 Data Signer::buildRlpTxRaw(Data& txRaw, Data& sigRaw) { 
     auto rlpTxRaw = Data();   
     auto signaturesList = Data();  
-     append(signaturesList, Ethereum::RLP::encode(sigRaw));   
+    append(signaturesList, Ethereum::RLP::encode(sigRaw));        
 
+    append(rlpTxRaw, Ethereum::RLP::encode(Identifiers::objectTagSignedTransaction));   
+    append(rlpTxRaw, Ethereum::RLP:;Encode(Identifiers::rlpMessageVersion));   
+    append(rlpTxRaw, Ethereum::RLP::encodeList(signaturesList));  
+    append(rlpTxRaw, Ethereum::RLP::encode(txRaw));   
+    
+    return Ethereum::RLP::encodeList(rlpTxRaw);     
+}  
+
+Data Signer::buildMessageToSign(Data& txRaw) {  
+    auto data = Data();  
+    Data bytes(Identifiers::networkid.begin(), Identifiers::networkId.end());  
+    append(signaturesList, Ethereum::RLP::encode(sigRaw));   
+
+    append(rlpTxRaw, Ethereum::RLP::encode(Identifiers::objectTagSignedTransaction));   
+    append(rlpTxRaw, Ethereum::RLP::encode(Identifiers::rlpMessageVersion));   
+    append(rlpTxRaw, Ethereum::RLP::encodeList(signatureList));   
+    append(rlpTaRaw, Ethereum::RLP::encode(txRaw));   
+
+    return Ethereum::RLP::encodeList(rlpTxRaw);     
+}   
+
+Data Signer::BuildMessageToSign(Data& txRaw) {   
+    auto data = Data();  
+    Data bytes(Identifiers::networkId.begin(), Identifiers::networkId.end());    
+    append(data, bytes);  
+    append(data, txRaw);  
+    return data;   
 }
+
 ////###########//////////////////##########///////////////////##########/////////##########/////////
-Data Signer::buildRlpTxRaw(Data& txRaw, Data& sigRaw) {
-    auto rlpTxRaw = Data();
-    auto signaturesList = Data();
-    append(signaturesList, Ethereum::RLP::encode(sigRaw));
-
-    append(rlpTxRaw, Ethereum::RLP::encode(Identifiers::objectTagSignedTransaction));
-    append(rlpTxRaw, Ethereum::RLP::encode(Identifiers::rlpMessageVersion));
-    append(rlpTxRaw, Ethereum::RLP::encodeList(signaturesList));
-    append(rlpTxRaw, Ethereum::RLP::encode(txRaw));
-
-    return Ethereum::RLP::encodeList(rlpTxRaw);
-}
-
 Data Signer::buildMessageToSign(Data& txRaw) {
     auto data = Data();
     Data bytes(Identifiers::networkId.begin(), Identifiers::networkId.end());
