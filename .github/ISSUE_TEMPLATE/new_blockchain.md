@@ -24,4 +24,4 @@ Reason:
 
 ## Checklist
 
-Finish check list [here](https://developer.trustwallet.com/wallet-core/newblockchain#blockchain-checklist).
+Finish check list [here](https://developer.trusTWallet.com/wallet-core/newblockchain#blockchain-checklist).

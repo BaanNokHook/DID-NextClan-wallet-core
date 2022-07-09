@@ -7,7 +7,7 @@
 package bitcoin
 
 import (
-	common "tw/protos/common"
+	common "TW/protos/common"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"
@@ -39,7 +39,7 @@ type Transaction struct {
 func (x *Transaction) Reset() {
 	*x = Transaction{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_Bitcoin_proto_msgTypes[0]
+		mi := &file_Bitcoin_proto_mTWTypes[0]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -52,7 +52,7 @@ func (x *Transaction) String() string {
 func (*Transaction) ProtoMessage() {}
 
 func (x *Transaction) ProtoReflect() protoreflect.Message {
-	mi := &file_Bitcoin_proto_msgTypes[0]
+	mi := &file_Bitcoin_proto_mTWTypes[0]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -113,7 +113,7 @@ type TransactionInput struct {
 func (x *TransactionInput) Reset() {
 	*x = TransactionInput{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_Bitcoin_proto_msgTypes[1]
+		mi := &file_Bitcoin_proto_mTWTypes[1]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -126,7 +126,7 @@ func (x *TransactionInput) String() string {
 func (*TransactionInput) ProtoMessage() {}
 
 func (x *TransactionInput) ProtoReflect() protoreflect.Message {
-	mi := &file_Bitcoin_proto_msgTypes[1]
+	mi := &file_Bitcoin_proto_mTWTypes[1]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -180,7 +180,7 @@ type OutPoint struct {
 func (x *OutPoint) Reset() {
 	*x = OutPoint{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_Bitcoin_proto_msgTypes[2]
+		mi := &file_Bitcoin_proto_mTWTypes[2]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -193,7 +193,7 @@ func (x *OutPoint) String() string {
 func (*OutPoint) ProtoMessage() {}
 
 func (x *OutPoint) ProtoReflect() protoreflect.Message {
-	mi := &file_Bitcoin_proto_msgTypes[2]
+	mi := &file_Bitcoin_proto_mTWTypes[2]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -245,7 +245,7 @@ type TransactionOutput struct {
 func (x *TransactionOutput) Reset() {
 	*x = TransactionOutput{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_Bitcoin_proto_msgTypes[3]
+		mi := &file_Bitcoin_proto_mTWTypes[3]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -258,7 +258,7 @@ func (x *TransactionOutput) String() string {
 func (*TransactionOutput) ProtoMessage() {}
 
 func (x *TransactionOutput) ProtoReflect() protoreflect.Message {
-	mi := &file_Bitcoin_proto_msgTypes[3]
+	mi := &file_Bitcoin_proto_mTWTypes[3]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -305,7 +305,7 @@ type UnspentTransaction struct {
 func (x *UnspentTransaction) Reset() {
 	*x = UnspentTransaction{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_Bitcoin_proto_msgTypes[4]
+		mi := &file_Bitcoin_proto_mTWTypes[4]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -318,7 +318,7 @@ func (x *UnspentTransaction) String() string {
 func (*UnspentTransaction) ProtoMessage() {}
 
 func (x *UnspentTransaction) ProtoReflect() protoreflect.Message {
-	mi := &file_Bitcoin_proto_msgTypes[4]
+	mi := &file_Bitcoin_proto_mTWTypes[4]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -370,7 +370,7 @@ type OutputAddress struct {
 func (x *OutputAddress) Reset() {
 	*x = OutputAddress{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_Bitcoin_proto_msgTypes[5]
+		mi := &file_Bitcoin_proto_mTWTypes[5]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -383,7 +383,7 @@ func (x *OutputAddress) String() string {
 func (*OutputAddress) ProtoMessage() {}
 
 func (x *OutputAddress) ProtoReflect() protoreflect.Message {
-	mi := &file_Bitcoin_proto_msgTypes[5]
+	mi := &file_Bitcoin_proto_mTWTypes[5]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -461,7 +461,7 @@ type SigningInput struct {
 func (x *SigningInput) Reset() {
 	*x = SigningInput{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_Bitcoin_proto_msgTypes[6]
+		mi := &file_Bitcoin_proto_mTWTypes[6]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -474,7 +474,7 @@ func (x *SigningInput) String() string {
 func (*SigningInput) ProtoMessage() {}
 
 func (x *SigningInput) ProtoReflect() protoreflect.Message {
-	mi := &file_Bitcoin_proto_msgTypes[6]
+	mi := &file_Bitcoin_proto_mTWTypes[6]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -629,7 +629,7 @@ type TransactionPlan struct {
 func (x *TransactionPlan) Reset() {
 	*x = TransactionPlan{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_Bitcoin_proto_msgTypes[7]
+		mi := &file_Bitcoin_proto_mTWTypes[7]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -642,7 +642,7 @@ func (x *TransactionPlan) String() string {
 func (*TransactionPlan) ProtoMessage() {}
 
 func (x *TransactionPlan) ProtoReflect() protoreflect.Message {
-	mi := &file_Bitcoin_proto_msgTypes[7]
+	mi := &file_Bitcoin_proto_mTWTypes[7]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -735,7 +735,7 @@ type SigningOutput struct {
 func (x *SigningOutput) Reset() {
 	*x = SigningOutput{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_Bitcoin_proto_msgTypes[8]
+		mi := &file_Bitcoin_proto_mTWTypes[8]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -748,7 +748,7 @@ func (x *SigningOutput) String() string {
 func (*SigningOutput) ProtoMessage() {}
 
 func (x *SigningOutput) ProtoReflect() protoreflect.Message {
-	mi := &file_Bitcoin_proto_msgTypes[8]
+	mi := &file_Bitcoin_proto_mTWTypes[8]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -813,7 +813,7 @@ type HashPublicKey struct {
 func (x *HashPublicKey) Reset() {
 	*x = HashPublicKey{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_Bitcoin_proto_msgTypes[9]
+		mi := &file_Bitcoin_proto_mTWTypes[9]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -826,7 +826,7 @@ func (x *HashPublicKey) String() string {
 func (*HashPublicKey) ProtoMessage() {}
 
 func (x *HashPublicKey) ProtoReflect() protoreflect.Message {
-	mi := &file_Bitcoin_proto_msgTypes[9]
+	mi := &file_Bitcoin_proto_mTWTypes[9]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -873,7 +873,7 @@ type PreSigningOutput struct {
 func (x *PreSigningOutput) Reset() {
 	*x = PreSigningOutput{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_Bitcoin_proto_msgTypes[10]
+		mi := &file_Bitcoin_proto_mTWTypes[10]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -886,7 +886,7 @@ func (x *PreSigningOutput) String() string {
 func (*PreSigningOutput) ProtoMessage() {}
 
 func (x *PreSigningOutput) ProtoReflect() protoreflect.Message {
-	mi := &file_Bitcoin_proto_msgTypes[10]
+	mi := &file_Bitcoin_proto_mTWTypes[10]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1084,12 +1084,12 @@ var (
 
 func file_Bitcoin_proto_rawDescGZIP() []byte {
 	file_Bitcoin_proto_rawDescOnce.Do(func() {
-		file_Bitcoin_proto_rawDescData = protoimpl.X.CompressGZIP(file_Bitcoin_proto_rawDescData)
+		file_Bitcoin_proto_rawDescData = protoimpl.X.CompresTWZIP(file_Bitcoin_proto_rawDescData)
 	})
 	return file_Bitcoin_proto_rawDescData
 }
 
-var file_Bitcoin_proto_msgTypes = make([]protoimpl.MessageInfo, 12)
+var file_Bitcoin_proto_mTWTypes = make([]protoimpl.MessageInfo, 12)
 var file_Bitcoin_proto_goTypes = []interface{}{
 	(*Transaction)(nil),        // 0: TW.Bitcoin.Proto.Transaction
 	(*TransactionInput)(nil),   // 1: TW.Bitcoin.Proto.TransactionInput
@@ -1133,7 +1133,7 @@ func file_Bitcoin_proto_init() {
 		return
 	}
 	if !protoimpl.UnsafeEnabled {
-		file_Bitcoin_proto_msgTypes[0].Exporter = func(v interface{}, i int) interface{} {
+		file_Bitcoin_proto_mTWTypes[0].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*Transaction); i {
 			case 0:
 				return &v.state
@@ -1145,7 +1145,7 @@ func file_Bitcoin_proto_init() {
 				return nil
 			}
 		}
-		file_Bitcoin_proto_msgTypes[1].Exporter = func(v interface{}, i int) interface{} {
+		file_Bitcoin_proto_mTWTypes[1].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*TransactionInput); i {
 			case 0:
 				return &v.state
@@ -1157,7 +1157,7 @@ func file_Bitcoin_proto_init() {
 				return nil
 			}
 		}
-		file_Bitcoin_proto_msgTypes[2].Exporter = func(v interface{}, i int) interface{} {
+		file_Bitcoin_proto_mTWTypes[2].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*OutPoint); i {
 			case 0:
 				return &v.state
@@ -1169,7 +1169,7 @@ func file_Bitcoin_proto_init() {
 				return nil
 			}
 		}
-		file_Bitcoin_proto_msgTypes[3].Exporter = func(v interface{}, i int) interface{} {
+		file_Bitcoin_proto_mTWTypes[3].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*TransactionOutput); i {
 			case 0:
 				return &v.state
@@ -1181,7 +1181,7 @@ func file_Bitcoin_proto_init() {
 				return nil
 			}
 		}
-		file_Bitcoin_proto_msgTypes[4].Exporter = func(v interface{}, i int) interface{} {
+		file_Bitcoin_proto_mTWTypes[4].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*UnspentTransaction); i {
 			case 0:
 				return &v.state
@@ -1193,7 +1193,7 @@ func file_Bitcoin_proto_init() {
 				return nil
 			}
 		}
-		file_Bitcoin_proto_msgTypes[5].Exporter = func(v interface{}, i int) interface{} {
+		file_Bitcoin_proto_mTWTypes[5].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*OutputAddress); i {
 			case 0:
 				return &v.state
@@ -1205,7 +1205,7 @@ func file_Bitcoin_proto_init() {
 				return nil
 			}
 		}
-		file_Bitcoin_proto_msgTypes[6].Exporter = func(v interface{}, i int) interface{} {
+		file_Bitcoin_proto_mTWTypes[6].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*SigningInput); i {
 			case 0:
 				return &v.state
@@ -1217,7 +1217,7 @@ func file_Bitcoin_proto_init() {
 				return nil
 			}
 		}
-		file_Bitcoin_proto_msgTypes[7].Exporter = func(v interface{}, i int) interface{} {
+		file_Bitcoin_proto_mTWTypes[7].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*TransactionPlan); i {
 			case 0:
 				return &v.state
@@ -1229,7 +1229,7 @@ func file_Bitcoin_proto_init() {
 				return nil
 			}
 		}
-		file_Bitcoin_proto_msgTypes[8].Exporter = func(v interface{}, i int) interface{} {
+		file_Bitcoin_proto_mTWTypes[8].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*SigningOutput); i {
 			case 0:
 				return &v.state
@@ -1241,7 +1241,7 @@ func file_Bitcoin_proto_init() {
 				return nil
 			}
 		}
-		file_Bitcoin_proto_msgTypes[9].Exporter = func(v interface{}, i int) interface{} {
+		file_Bitcoin_proto_mTWTypes[9].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*HashPublicKey); i {
 			case 0:
 				return &v.state
@@ -1253,7 +1253,7 @@ func file_Bitcoin_proto_init() {
 				return nil
 			}
 		}
-		file_Bitcoin_proto_msgTypes[10].Exporter = func(v interface{}, i int) interface{} {
+		file_Bitcoin_proto_mTWTypes[10].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*PreSigningOutput); i {
 			case 0:
 				return &v.state
@@ -1278,7 +1278,7 @@ func file_Bitcoin_proto_init() {
 		},
 		GoTypes:           file_Bitcoin_proto_goTypes,
 		DependencyIndexes: file_Bitcoin_proto_depIdxs,
-		MessageInfos:      file_Bitcoin_proto_msgTypes,
+		MessageInfos:      file_Bitcoin_proto_mTWTypes,
 	}.Build()
 	File_Bitcoin_proto = out.File
 	file_Bitcoin_proto_rawDesc = nil

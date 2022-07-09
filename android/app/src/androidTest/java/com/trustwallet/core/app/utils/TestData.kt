@@ -1,12 +1,12 @@
-import com.trustwallet.core.app.utils.Numeric
-import com.trustwallet.core.app.utils.toHexBytes
-import com.trustwallet.core.app.utils.toHex
+import com.trusTWallet.core.app.utils.Numeric
+import com.trusTWallet.core.app.utils.toHexBytes
+import com.trusTWallet.core.app.utils.toHex
 import org.junit.Assert.assertEquals
 import org.junit.Test
 
 class TestData {
     init {
-        System.loadLibrary("TrustWalletCore");
+        System.loadLibrary("TrusTWalletCore");
     }
 
     @Test

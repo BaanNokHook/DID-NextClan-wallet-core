@@ -1,8 +1,8 @@
-package com.trustwallet.core.app.blockchains.waves
+package com.trusTWallet.core.app.blockchains.waves
 
 import com.google.protobuf.ByteString
-import com.trustwallet.core.app.utils.toHex
-import com.trustwallet.core.app.utils.toHexByteArray
+import com.trusTWallet.core.app.utils.toHex
+import com.trusTWallet.core.app.utils.toHexByteArray
 import org.junit.Assert.assertEquals
 import org.junit.Test
 import wallet.core.jni.CoinType.WAVES
@@ -10,16 +10,16 @@ import wallet.core.java.AnySigner
 import wallet.core.jni.proto.Waves
 import wallet.core.jni.proto.Waves.SigningOutput
 
-class TestWavesTransactionSigner {
+class TesTWavesTransactionSigner {
 
     init {
-        System.loadLibrary("TrustWalletCore")
+        System.loadLibrary("TrusTWalletCore")
     }
 
     @Test
-    fun testWavesTransactionSigning() {
+    fun tesTWavesTransactionSigning() {
         val signingInput = Waves.SigningInput.newBuilder()
-        val transferMsg = Waves.TransferMessage.newBuilder().apply {
+        val transferMTW = Waves.TransferMessage.newBuilder().apply {
             amount = 100_000_000
             asset = "DacnEpaUVFRCYk8Fcd1F3cqUZuT4XG7qW9mRyoZD81zq"
             fee = 100_000
@@ -30,7 +30,7 @@ class TestWavesTransactionSigner {
         signingInput.apply {
             timestamp = 1559146613
             privateKey = ByteString.copyFrom("68b7a9adb4a655b205f43dac413803785921e22cd7c4d05857b203a62621075f".toHexByteArray())
-            transferMessage = transferMsg
+            transferMessage = transferMTW
         }
 
         val sign = AnySigner.sign(signingInput.build(), WAVES, SigningOutput.parser())

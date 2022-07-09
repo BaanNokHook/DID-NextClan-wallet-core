@@ -1,7 +1,7 @@
-package com.trustwallet.core.app.blockchains.solana
+package com.trusTWallet.core.app.blockchains.solana
 
 import com.google.protobuf.ByteString
-import com.trustwallet.core.app.utils.toHexByteArray
+import com.trusTWallet.core.app.utils.toHexByteArray
 import java.util.Base64
 import org.junit.Assert.assertEquals
 import org.junit.Test
@@ -14,7 +14,7 @@ import wallet.core.jni.proto.NEAR.SigningOutput
 class TestNEARSigner {
 
     init {
-        System.loadLibrary("TrustWalletCore")
+        System.loadLibrary("TrusTWalletCore")
     }
 
     @Test

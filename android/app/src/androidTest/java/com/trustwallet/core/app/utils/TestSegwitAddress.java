@@ -1,4 +1,4 @@
-package com.trustwallet.core.app.utils;
+package com.trusTWallet.core.app.utils;
 
 import org.junit.Test;
 import wallet.core.jni.HRP;
@@ -11,7 +11,7 @@ import static org.junit.Assert.assertEquals;
 public class TestSegwitAddress {
 
     static {
-        System.loadLibrary("TrustWalletCore");
+        System.loadLibrary("TrusTWalletCore");
     }
 
     @Test

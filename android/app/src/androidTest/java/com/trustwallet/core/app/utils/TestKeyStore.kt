@@ -1,4 +1,4 @@
-package com.trustwallet.core.app.utils
+package com.trusTWallet.core.app.utils
 
 import org.junit.Assert.*
 import org.junit.Test
@@ -8,7 +8,7 @@ import wallet.core.jni.CoinType
 class TestKeyStore {
 
     init {
-        System.loadLibrary("TrustWalletCore")
+        System.loadLibrary("TrusTWalletCore")
     }
 
     @Test

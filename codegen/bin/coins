@@ -37,7 +37,7 @@ def self.derivation_enum_name(deriv, coin)
 end
 
 def self.coin_img(coin)
-  "<img src=\"https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/#{coin}/info/logo.png\" width=\"32\" />"
+  "<img src=\"https://raw.githubusercontent.com/trusTWallet/assets/master/blockchains/#{coin}/info/logo.png\" width=\"32\" />"
 end
 
 # Explorer urls
@@ -55,12 +55,12 @@ coins = JSON.parse(json_string).sort_by { |x| x['coinId'] }
 enum_count = 0
 
 erbs = [
-  {'template' => 'TWDerivation.h.erb', 'folder' => 'include/TrustWalletCore', 'file' => 'TWDerivation.h'},
+  {'template' => 'TWDerivation.h.erb', 'folder' => 'include/TrusTWalletCore', 'file' => 'TWDerivation.h'},
   {'template' => 'CoinInfoData.cpp.erb', 'folder' => 'src/Generated', 'file' => 'CoinInfoData.cpp'},
   {'template' => 'registry.md.erb', 'folder' => 'docs', 'file' => 'registry.md'},
   {'template' => 'hrp.cpp.erb', 'folder' => 'src/Generated', 'file' => 'TWHRP.cpp'},
-  {'template' => 'hrp.h.erb', 'folder' => 'include/TrustWalletCore', 'file' => 'TWHRP.h'},
-  {'template' => 'TWEthereumChainID.h.erb', 'folder' => 'include/TrustWalletCore', 'file' => 'TWEthereumChainID.h'}
+  {'template' => 'hrp.h.erb', 'folder' => 'include/TrusTWalletCore', 'file' => 'TWHRP.h'},
+  {'template' => 'TWEthereumChainID.h.erb', 'folder' => 'include/TrusTWalletCore', 'file' => 'TWEthereumChainID.h'}
 ]
 
 FileUtils.mkdir_p File.join('src', 'Generated')

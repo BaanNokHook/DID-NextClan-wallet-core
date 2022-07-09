@@ -1,4 +1,4 @@
-package com.trustwallet.core.app.blockchains
+package com.trusTWallet.core.app.blockchains
 
 import wallet.core.jni.CoinType
 import wallet.core.jni.Curve
@@ -10,7 +10,7 @@ import org.junit.Test
 
 class TestCoinType {
     init {
-        System.loadLibrary("TrustWalletCore");
+        System.loadLibrary("TrusTWalletCore");
     }
 
     @Test

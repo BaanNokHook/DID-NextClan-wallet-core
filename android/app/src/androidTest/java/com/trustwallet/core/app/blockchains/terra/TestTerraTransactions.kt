@@ -1,7 +1,7 @@
-package com.trustwallet.core.app.blockchains.terra
+package com.trusTWallet.core.app.blockchains.terra
 
 import com.google.protobuf.ByteString
-import com.trustwallet.core.app.utils.toHexByteArray
+import com.trusTWallet.core.app.utils.toHexByteArray
 import org.junit.Assert.assertEquals
 import org.junit.Test
 import wallet.core.jni.*
@@ -14,7 +14,7 @@ import wallet.core.java.AnySigner
 class TestTerraTransactions {
 
     init {
-        System.loadLibrary("TrustWalletCore")
+        System.loadLibrary("TrusTWalletCore")
     }
 
     @Test
@@ -29,15 +29,15 @@ class TestTerraTransactions {
             denom = "uluna"
         }.build()
 
-        val sendCoinsMsg = Cosmos.Message.Send.newBuilder().apply {
+        val sendCoinsMTW = Cosmos.Message.Send.newBuilder().apply {
             fromAddress = from
             toAddress = "terra1hdp298kaz0eezpgl6scsykxljrje3667d233ms"
             addAllAmounts(listOf(txAmount))
-            typePrefix = "bank/MsgSend"
+            typePrefix = "bank/MTWSend"
         }.build()
 
         val message = Cosmos.Message.newBuilder().apply {
-            sendCoinsMessage = sendCoinsMsg
+            sendCoinsMessage = sendCoinsMTW
         }.build()
 
         val feeAmount = Cosmos.Amount.newBuilder().apply {
@@ -63,7 +63,7 @@ class TestTerraTransactions {
         val output = AnySigner.sign(signingInput, TERRA, SigningOutput.parser())
         val jsonPayload = output.json
 
-        val expectedJsonPayload = """{"mode":"block","tx":{"fee":{"amount":[{"amount":"3000","denom":"uluna"}],"gas":"200000"},"memo":"","msg":[{"type":"bank/MsgSend","value":{"amount":[{"amount":"1000000","denom":"uluna"}],"from_address":"terra1jf9aaj9myrzsnmpdr7twecnaftzmku2mhs2hfe","to_address":"terra1hdp298kaz0eezpgl6scsykxljrje3667d233ms"}}],"signatures":[{"pub_key":{"type":"tendermint/PubKeySecp256k1","value":"A13xhVZlIdangCMZ7gbhoo6Xt3ct+1/dE8pvBXVRiWjk"},"signature":"KPdiVsKpY12JG/VKEJVa/FpMKclxlS0qNNG6VOAypj10R5vY5UX5IgRJET1zNYnH0wvcXxfNXV+s8jtwN2UXiQ=="}]}}"""
+        val expectedJsonPayload = """{"mode":"block","tx":{"fee":{"amount":[{"amount":"3000","denom":"uluna"}],"gas":"200000"},"memo":"","mTW":[{"type":"bank/MTWSend","value":{"amount":[{"amount":"1000000","denom":"uluna"}],"from_address":"terra1jf9aaj9myrzsnmpdr7TWecnaftzmku2mhs2hfe","to_address":"terra1hdp298kaz0eezpgl6scsykxljrje3667d233ms"}}],"signatures":[{"pub_key":{"type":"tendermint/PubKeySecp256k1","value":"A13xhVZlIdangCMZ7gbhoo6Xt3ct+1/dE8pvBXVRiWjk"},"signature":"KPdiVsKpY12JG/VKEJVa/FpMKclxlS0qNNG6VOAypj10R5vY5UX5IgRJET1zNYnH0wvcXxfNXV+s8jTWN2UXiQ=="}]}}"""
         assertEquals(expectedJsonPayload, jsonPayload)
 
     }
@@ -123,7 +123,7 @@ class TestTerraTransactions {
         val wasmGenericMessage = Cosmos.Message.WasmTerraExecuteContractGeneric.newBuilder().apply {
             senderAddress = from
             contractAddress = "terra14z56l0fp2lsf86zy3hty2z47ezkhnthtr9yq76" // ANC
-            executeMsg = """{"transfer": { "amount": "250000", "recipient": "terra1d7048csap4wzcv5zm7z6tdqem2agyp9647vdyj" } }"""
+            executeMTW = """{"transfer": { "amount": "250000", "recipient": "terra1d7048csap4wzcv5zm7z6tdqem2agyp9647vdyj" } }"""
         }.build()
 
         val message = Cosmos.Message.newBuilder().apply {
@@ -172,7 +172,7 @@ class TestTerraTransactions {
         val wasmGenericMessage = Cosmos.Message.WasmTerraExecuteContractGeneric.newBuilder().apply {
             senderAddress = from
             contractAddress = "terra1sepfj7s0aeg5967uxnfk4thzlerrsktkpelm5s" // ANC Market
-            executeMsg = """{ "deposit_stable": {} }"""
+            executeMTW = """{ "deposit_stable": {} }"""
             addCoins(coins)
         }.build()
 

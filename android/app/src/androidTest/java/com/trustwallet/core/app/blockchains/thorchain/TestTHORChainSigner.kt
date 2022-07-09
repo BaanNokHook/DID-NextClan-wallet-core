@@ -4,14 +4,14 @@
 // terms governing use, modification, and redistribution, is contained in the
 // file LICENSE at the root of the source code distribution tree.
 
-package com.trustwallet.core.app.blockchains.thorchain
+package com.trusTWallet.core.app.blockchains.thorchain
 
 import android.util.Log
 import com.google.protobuf.ByteString
-import com.trustwallet.core.app.utils.Numeric
-import com.trustwallet.core.app.utils.toHexByteArray
-import com.trustwallet.core.app.utils.toHexBytes
-import com.trustwallet.core.app.utils.toHexBytesInByteString
+import com.trusTWallet.core.app.utils.Numeric
+import com.trusTWallet.core.app.utils.toHexByteArray
+import com.trusTWallet.core.app.utils.toHexBytes
+import com.trusTWallet.core.app.utils.toHexBytesInByteString
 import org.junit.Assert.assertEquals
 import org.junit.Test
 import wallet.core.java.AnySigner
@@ -24,7 +24,7 @@ import wallet.core.jni.*
 class TestTHORChainSigner {
 
     init {
-        System.loadLibrary("TrustWalletCore")
+        System.loadLibrary("TrusTWalletCore")
     }
 
     @Test
@@ -40,14 +40,14 @@ class TestTHORChainSigner {
             denom = "rune"
         }.build()
 
-        val sendCoinsMsg = Cosmos.Message.THORChainSend.newBuilder().apply {
+        val sendCoinsMTW = Cosmos.Message.THORChainSend.newBuilder().apply {
             fromAddress = ByteString.copyFrom(from)
             toAddress = ByteString.copyFrom(to)
             addAllAmounts(listOf(txAmount))
         }.build()
 
         val message = Cosmos.Message.newBuilder().apply {
-            thorchainSendMessage = sendCoinsMsg
+            thorchainSendMessage = sendCoinsMTW
         }.build()
 
         val feeAmount = Cosmos.Amount.newBuilder().apply {
@@ -73,7 +73,7 @@ class TestTHORChainSigner {
 
         val output = AnySigner.sign(signingInput, THORCHAIN, SigningOutput.parser())
 
-        assertEquals(output.serialized, "{\"mode\":\"BROADCAST_MODE_BLOCK\",\"tx_bytes\":\"ClIKUAoOL3R5cGVzLk1zZ1NlbmQSPgoUFSLnZ9tusZcIsAOAKb+9YHvJvQ4SFMqGRZ+wBVHH30JUDF54aRksgzrbGhAKBHJ1bmUSCDM4MDAwMDAwEmYKUApGCh8vY29zbW9zLmNyeXB0by5zZWNwMjU2azEuUHViS2V5EiMKIQPtmX45bPQpL1/OWkK7pBWZzNXZbjExVKfJ6nBJ3jF8dxIECgIIARgVEhIKCwoEcnVuZRIDMjAwEKDLmAEaQKZtS3ATa26OOGvqdKm14ZbHeNfkPtIajXi5MkZ5XaX2SWOeX+YnCPZ9TxF9Jj5cVIo71m55xq4hVL3yDbRe89g=\"}")
+        assertEquals(output.serialized, "{\"mode\":\"BROADCAST_MODE_BLOCK\",\"tx_bytes\":\"ClIKUAoOL3R5cGVzLk1zZ1NlbmQSPgoUFSLnZ9tusZcIsAOAKb+9YHvJvQ4SFMqGRZ+wBVHH30JUDF54aRkTWzrbGhAKBHJ1bmUSCDM4MDAwMDAwEmYKUApGCh8vY29zbW9zLmNyeXB0by5zZWNwMjU2azEuUHViS2V5EiMKIQPtmX45bPQpL1/OWkK7pBWZzNXZbjExVKfJ6nBJ3jF8dxIECgIIARgVEhIKCwoEcnVuZRIDMjAwEKDLmAEaQKZtS3ATa26OOGvqdKm14ZbHeNfkPtIajXi5MkZ5XaX2SWOeX+YnCPZ9TxF9Jj5cVIo71m55xq4hVL3yDbRe89g=\"}")
         assertEquals(output.error, "")
         assertEquals(output.json, "")
     }

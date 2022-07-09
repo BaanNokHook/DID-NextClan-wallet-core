@@ -1,4 +1,4 @@
-package com.trustwallet.core.app.blockchains.ethereum
+package com.trusTWallet.core.app.blockchains.ethereum
 
 import org.junit.Assert.assertEquals
 import org.junit.Test
@@ -9,7 +9,7 @@ import org.junit.Assert.assertFalse
 class TestEthereumAddress {
 
     init {
-        System.loadLibrary("TrustWalletCore")
+        System.loadLibrary("TrusTWalletCore")
     }
 
     @Test

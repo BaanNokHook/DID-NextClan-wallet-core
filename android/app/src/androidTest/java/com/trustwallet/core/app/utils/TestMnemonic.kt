@@ -1,4 +1,4 @@
-package com.trustwallet.core.app.utils
+package com.trusTWallet.core.app.utils
 
 import wallet.core.jni.Mnemonic
 import org.junit.Assert.assertTrue
@@ -9,7 +9,7 @@ import org.junit.Test
 
 class TestMnemonic {
     init {
-        System.loadLibrary("TrustWalletCore");
+        System.loadLibrary("TrusTWalletCore");
     }
 
     @Test

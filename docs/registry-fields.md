@@ -31,7 +31,7 @@ Ex.: `10000118` for Osmosis, `118` for Cosmos; `20000714` for BNB Smart Chain.
 See also: `slip44` and `chainId`.
 
 **`slip44`**
-Optionally, SLIP-44 (BIP-44) coin ID can be specified here, in case it differs from `coinId`.  Most of the case the two are the same, so this can be omitted.
+Optionally, SLIP-44 (BIP-44) coin ID can be specified here, in case it differs from `coinId`.  Most of the case the TWo are the same, so this can be omitted.
 Ex.: `60` for Optimism (coinID is `10000070`).
 
 **`symbol`**
@@ -92,7 +92,7 @@ Bitcoin uses Segwit address by default, but also supports earlier P2PKH addresse
     ],
 ```
 
-Solana supports two derivations, which differ in derivation path:
+Solana supports TWo derivations, which differ in derivation path:
 
 ```
     "derivation": [
@@ -132,7 +132,7 @@ Ex. `'bc'` for Bitcoin, `'cosmos'` for Cosmos.
 **`chainId`**
 Chain identifier, used by forks, e.g. in case of Ethereum (a decimal number), or Cosomos (a string ID).
 Chain identifier, in case of Ethereum it's a constant decimal number;
-for Cosmos, it's a dynamic string network id (usually changes with network upgrades).
+for Cosmos, it's a dynamic string neTWork id (usually changes with neTWork upgrades).
 
 Please note the chain id might not be always latest in registry.  In transaction building current value has to be supplied each time.
 

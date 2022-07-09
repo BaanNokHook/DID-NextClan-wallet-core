@@ -1,6 +1,6 @@
-package com.trustwallet.core.app.blockchains.waves
+package com.trusTWallet.core.app.blockchains.waves
 
-import com.trustwallet.core.app.utils.toHexByteArray
+import com.trusTWallet.core.app.utils.toHexByteArray
 import org.junit.Assert.*
 import org.junit.Test
 import wallet.core.jni.CoinType.TEZOS
@@ -9,7 +9,7 @@ import wallet.core.java.AnySigner
 class TestTezosTransactionSigner {
 
     init {
-        System.loadLibrary("TrustWalletCore")
+        System.loadLibrary("TrusTWalletCore")
     }
 
     @Test

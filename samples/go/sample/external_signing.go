@@ -4,11 +4,11 @@ import (
 	"encoding/hex"
 	"fmt"
 	"math/big"
-	"tw/core"
-	"tw/protos/binance"
-	"tw/protos/bitcoin"
-	"tw/protos/common"
-	"tw/protos/ethereum"
+	"TW/core"
+	"TW/protos/binance"
+	"TW/protos/bitcoin"
+	"TW/protos/common"
+	"TW/protos/ethereum"
 
 	"google.golang.org/protobuf/proto"
 )
@@ -29,7 +29,7 @@ func SignExternalBinanceDemo() {
 	txInputData := core.BuildInput(
 		coin,
 		"bnb1grpf0955h0ykzq3ar5nmum7y6gdfl6lxfn46h2", // from
-		"bnb1hlly02l6ahjsgxw9wlcswnlwdhg4xhx38yxpd5", // to
+		"bnb1hlly02l6ahjTWxw9wlcswnlwdhg4xhx38yxpd5", // to
 		"1",   // amount
 		"BNB", // asset
 		"",    // memo

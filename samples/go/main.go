@@ -5,11 +5,11 @@ import (
 	"fmt"
 	"math"
 	"math/big"
-	"tw/core"
-	"tw/protos/bitcoin"
-	"tw/protos/common"
-	"tw/protos/ethereum"
-	"tw/sample"
+	"TW/core"
+	"TW/protos/bitcoin"
+	"TW/protos/common"
+	"TW/protos/ethereum"
+	"TW/sample"
 )
 
 func main() {
@@ -20,25 +20,25 @@ func main() {
 	fmt.Println("==> mnemonic is valid: ", core.IsMnemonicValid(mn))
 
 	// bitcoin wallet
-	bw, err := core.CreateWalletWithMnemonic(mn, core.CoinTypeBitcoin)
+	bw, err := core.CreateWalleTWithMnemonic(mn, core.CoinTypeBitcoin)
 	if err != nil {
 		panic(err)
 	}
-	printWallet(bw)
+	prinTWallet(bw)
 
 	// ethereum wallet
-	ew, err := core.CreateWalletWithMnemonic(mn, core.CoinTypeEthereum)
+	ew, err := core.CreateWalleTWithMnemonic(mn, core.CoinTypeEthereum)
 	if err != nil {
 		panic(err)
 	}
-	printWallet(ew)
+	prinTWallet(ew)
 
 	// tron wallet
-	tw, err := core.CreateWalletWithMnemonic(mn, core.CoinTypeTron)
+	TW, err := core.CreateWalleTWithMnemonic(mn, core.CoinTypeTron)
 	if err != nil {
 		panic(err)
 	}
-	printWallet(tw)
+	prinTWallet(TW)
 
 	// Ethereum transaction
 	ethTxn := createEthTransaction(ew)
@@ -58,7 +58,7 @@ func createEthTransaction(ew *core.Wallet) string {
 
 	input := ethereum.SigningInput{
 		ChainId:    big.NewInt(4).Bytes(), // mainnet: 1, rinkeby: 4 https://chainlist.org/
-		Nonce:      big.NewInt(0).Bytes(), // get nonce from network
+		Nonce:      big.NewInt(0).Bytes(), // get nonce from neTWork
 		TxMode:     ethereum.TransactionMode_Legacy,
 		GasPrice:   big.NewInt(100000000000).Bytes(), // 100 gwei
 		GasLimit:   big.NewInt(21000).Bytes(),
@@ -109,7 +109,7 @@ func createBtcTransaction(bw *core.Wallet) string {
 		Amount:        1000000,
 		ByteFee:       1,
 		ToAddress:     "1Bp9U1ogV3A14FMvKbRJms7ctyso4Z4Tcx",
-		ChangeAddress: "1FQc5LdgGHMHEN9nwkjmz6tWkxhPpxBvBU",
+		ChangeAddress: "1FQc5LdgGHMHEN9nwkjmz6TWkxhPpxBvBU",
 		PrivateKey:    [][]byte{priKeyByte},
 		Utxo:          []*bitcoin.UnspentTransaction{&utxo},
 		CoinType:      uint32(core.CoinTypeBitcoin),
@@ -126,7 +126,7 @@ func createBtcTransaction(bw *core.Wallet) string {
 	return hex.EncodeToString(output.GetEncoded())
 }
 
-func printWallet(w *core.Wallet) {
+func prinTWallet(w *core.Wallet) {
 	fmt.Printf("%s wallet: \n", w.CoinType.GetName())
 	fmt.Printf("\t address: %s \n", w.Address)
 	fmt.Printf("\t pri key: %s \n", w.PriKey)

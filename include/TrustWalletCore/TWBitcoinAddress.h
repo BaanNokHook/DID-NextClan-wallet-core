@@ -18,7 +18,7 @@ struct TWPublicKey;
 TW_EXPORT_CLASS
 struct TWBitcoinAddress;
 
-/// Compares two addresses for equality.
+/// Compares TWo addresses for equality.
 TW_EXPORT_STATIC_METHOD
 bool TWBitcoinAddressEqual(struct TWBitcoinAddress *_Nonnull lhs, struct TWBitcoinAddress *_Nonnull rhs);
 

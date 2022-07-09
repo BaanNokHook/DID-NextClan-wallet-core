@@ -4,14 +4,14 @@
 // terms governing use, modification, and redistribution, is contained in the
 // file LICENSE at the root of the source code distribution tree.
 
-package com.trustwallet.core.app.blockchains.cryptoorg
+package com.trusTWallet.core.app.blockchains.cryptoorg
 
 import com.google.protobuf.ByteString
-import com.trustwallet.core.app.utils.Numeric
-import com.trustwallet.core.app.utils.toHexByteArray
-import com.trustwallet.core.app.utils.toHexBytes
-import com.trustwallet.core.app.utils.toHex
-import com.trustwallet.core.app.utils.toHexBytesInByteString
+import com.trusTWallet.core.app.utils.Numeric
+import com.trusTWallet.core.app.utils.toHexByteArray
+import com.trusTWallet.core.app.utils.toHexBytes
+import com.trusTWallet.core.app.utils.toHex
+import com.trusTWallet.core.app.utils.toHexBytesInByteString
 import org.junit.Assert.assertEquals
 import org.junit.Test
 import wallet.core.java.AnySigner
@@ -24,7 +24,7 @@ import wallet.core.jni.*
 class TestCryptoorgSigner {
 
     init {
-        System.loadLibrary("TrustWalletCore")
+        System.loadLibrary("TrusTWalletCore")
     }
 
     @Test
@@ -38,14 +38,14 @@ class TestCryptoorgSigner {
             denom = "basecro"
         }.build()
 
-        val sendCoinsMsg = Cosmos.Message.Send.newBuilder().apply {
+        val sendCoinsMTW = Cosmos.Message.Send.newBuilder().apply {
             fromAddress = from
             toAddress = "cro1xpahy6c7wldxacv6ld99h435mhvfnsup24vcus"
             addAllAmounts(listOf(txAmount))
         }.build()
 
         val message = Cosmos.Message.newBuilder().apply {
-            sendCoinsMessage = sendCoinsMsg
+            sendCoinsMessage = sendCoinsMTW
         }.build()
 
         val feeAmount = Cosmos.Amount.newBuilder().apply {

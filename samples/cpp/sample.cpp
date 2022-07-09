@@ -4,12 +4,12 @@
 // terms governing use, modification, and redistribution, is contained in the
 // file LICENSE at the root of the source code distribution tree.
 
-#include <TrustWalletCore/TWCoinType.h>
-#include <TrustWalletCore/TWAnySigner.h>
-#include <TrustWalletCore/TWCoinTypeConfiguration.h>
-#include <TrustWalletCore/TWHDWallet.h>
-#include <TrustWalletCore/TWPrivateKey.h>
-#include <TrustWalletCore/TWString.h>
+#include <TrusTWalletCore/TWCoinType.h>
+#include <TrusTWalletCore/TWAnySigner.h>
+#include <TrusTWalletCore/TWCoinTypeConfiguration.h>
+#include <TrusTWalletCore/TWHDWallet.h>
+#include <TrusTWalletCore/TWPrivateKey.h>
+#include <TrusTWalletCore/TWString.h>
 
 #include <iostream>
 #include <string>
@@ -65,7 +65,7 @@ int main() {
 
             // Alternative: Derive address using default derivation path.
             // Done in 2 steps: derive private key, then address from private key.
-            // Note that private key is passed around between the two calls by the wallet -- be always cautious when handling secrets, avoid the risk of leaking secrets.
+            // Note that private key is passed around beTWeen the TWo calls by the wallet -- be always cautious when handling secrets, avoid the risk of leaking secrets.
             cout << "Default derivation path:  " << TWStringUTF8Bytes(TWCoinTypeDerivationPath(coinType)) << endl;
             TWPrivateKey* secretPrivateKeyDefault = TWHDWalletGetKeyForCoin(walletImp, coinType);
             string addressDefault = TWStringUTF8Bytes(TWCoinTypeDeriveAddress(coinType, secretPrivateKeyDefault));
@@ -85,7 +85,7 @@ int main() {
             // Steps for sending:
             // 1. put together a send message (contains sender and receiver address, amount, gas price, etc.)
             // 2. sign this message
-            // 3. broadcast this message to the P2P network -- not done in this sample
+            // 3. broadcast this message to the P2P neTWork -- not done in this sample
             // Note that Signer input and output are represented as protobuf binary messages, for which support is missing in C++.
             // Therefore some direct serialization/parsing is done in helper methods.
             cout << "SEND funds:" << endl;
@@ -112,8 +112,8 @@ int main() {
             auto result = TWAnySignerSignJSON(json, secretPrivKey, TWCoinTypeEthereum);
             auto signedTransaction = string(TWStringUTF8Bytes(result));
             cout << "done" << endl;
-            cout << "Signed transaction data (to be broadcast to network):  (len " << signedTransaction.length() << ") '" << signedTransaction << "'" << endl;
-            // see e.g. https://github.com/flightwallet/decode-eth-tx for checking binary output content
+            cout << "Signed transaction data (to be broadcast to neTWork):  (len " << signedTransaction.length() << ") '" << signedTransaction << "'" << endl;
+            // see e.g. https://github.com/flighTWallet/decode-eth-tx for checking binary output content
             cout << endl;
             TWStringDelete(json);
             TWStringDelete(result);

@@ -1,6 +1,6 @@
-package com.trustwallet.core.app.blockchains.nano
+package com.trusTWallet.core.app.blockchains.nano
 
-import com.trustwallet.core.app.utils.toHexByteArray
+import com.trusTWallet.core.app.utils.toHexByteArray
 import org.junit.Assert.assertEquals
 import org.junit.Test
 import wallet.core.jni.PublicKey
@@ -11,7 +11,7 @@ import wallet.core.jni.CoinType
 class TestNanoAddress {
 
     init {
-        System.loadLibrary("TrustWalletCore")
+        System.loadLibrary("TrusTWalletCore")
     }
 
     @Test

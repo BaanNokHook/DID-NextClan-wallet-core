@@ -1,8 +1,8 @@
-package com.trustwallet.core.app.blockchains.nano
+package com.trusTWallet.core.app.blockchains.nano
 
 import com.google.protobuf.ByteString
-import com.trustwallet.core.app.utils.toHex
-import com.trustwallet.core.app.utils.toHexByteArray
+import com.trusTWallet.core.app.utils.toHex
+import com.trusTWallet.core.app.utils.toHexByteArray
 import org.junit.Assert.assertEquals
 import org.junit.Test
 import wallet.core.jni.CoinType.NANO
@@ -13,7 +13,7 @@ import wallet.core.jni.proto.Nano.SigningOutput
 class TestNanoSigner {
 
     init {
-        System.loadLibrary("TrustWalletCore")
+        System.loadLibrary("TrusTWalletCore")
     }
 
     @Test
@@ -22,7 +22,7 @@ class TestNanoSigner {
         signingInput.apply {
             privateKey = ByteString.copyFrom("173c40e97fe2afcd24187e74f6b603cb949a5365e72fbdd065a6b165e2189e34".toHexByteArray())
             linkBlock = ByteString.copyFrom("491fca2c69a84607d374aaf1f6acd3ce70744c5be0721b5ed394653e85233507".toHexByteArray())
-            representative = "xrb_3arg3asgtigae3xckabaaewkx3bzsh7nwz7jkmjos79ihyaxwphhm6qgjps4"
+            representative = "xrb_3arg3aTWtigae3xckabaaewkx3bzsh7nwz7jkmjos79ihyaxwphhm6qgjps4"
             balance = "96242336390000000000000000000"
         }
 

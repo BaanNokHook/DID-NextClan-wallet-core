@@ -1,8 +1,8 @@
-package com.trustwallet.core.app.blockchains.bitcoin
+package com.trusTWallet.core.app.blockchains.bitcoin
 
 import com.google.protobuf.ByteString
-import com.trustwallet.core.app.utils.Numeric
-import com.trustwallet.core.app.utils.toHexBytes
+import com.trusTWallet.core.app.utils.Numeric
+import com.trusTWallet.core.app.utils.toHexBytes
 import org.junit.Assert.assertEquals
 import org.junit.Test
 import wallet.core.java.AnySigner
@@ -17,7 +17,7 @@ import wallet.core.jni.proto.Common.SigningError
 class TestBitcoinSigning {
 
     init {
-        System.loadLibrary("TrustWalletCore")
+        System.loadLibrary("TrusTWalletCore")
     }
 
     @Test
@@ -26,7 +26,7 @@ class TestBitcoinSigning {
             .setAmount(335_790_000)
             .setHashType(BitcoinScript.hashTypeForCoin(CoinType.BITCOIN))
             .setToAddress("1Bp9U1ogV3A14FMvKbRJms7ctyso4Z4Tcx")
-            .setChangeAddress("1FQc5LdgGHMHEN9nwkjmz6tWkxhPpxBvBU")
+            .setChangeAddress("1FQc5LdgGHMHEN9nwkjmz6TWkxhPpxBvBU")
             .setByteFee(1)
 
         // Setting Private Keys

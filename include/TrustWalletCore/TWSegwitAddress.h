@@ -19,7 +19,7 @@ struct TWPublicKey;
 TW_EXPORT_CLASS
 struct TWSegwitAddress;
 
-/// Compares two addresses for equality.
+/// Compares TWo addresses for equality.
 TW_EXPORT_STATIC_METHOD
 bool TWSegwitAddressEqual(struct TWSegwitAddress *_Nonnull lhs, struct TWSegwitAddress *_Nonnull rhs);
 

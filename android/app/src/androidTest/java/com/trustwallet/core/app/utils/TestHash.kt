@@ -1,4 +1,4 @@
-package com.trustwallet.core.app.utils
+package com.trusTWallet.core.app.utils
 
 import org.junit.Assert.assertEquals
 import org.junit.Test
@@ -7,7 +7,7 @@ import wallet.core.jni.Hash
 class TestHash {
 
     init {
-        System.loadLibrary("TrustWalletCore")
+        System.loadLibrary("TrusTWalletCore")
     }
 
     @Test

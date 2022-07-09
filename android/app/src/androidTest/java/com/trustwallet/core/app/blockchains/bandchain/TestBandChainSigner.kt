@@ -4,10 +4,10 @@
 // terms governing use, modification, and redistribution, is contained in the
 // file LICENSE at the root of the source code distribution tree.
 
-package com.trustwallet.core.app.blockchains.bandchain
+package com.trusTWallet.core.app.blockchains.bandchain
 
 import com.google.protobuf.ByteString
-import com.trustwallet.core.app.utils.toHexByteArray
+import com.trusTWallet.core.app.utils.toHexByteArray
 import org.junit.Assert.assertEquals
 import org.junit.Test
 import wallet.core.java.AnySigner
@@ -20,7 +20,7 @@ import wallet.core.jni.proto.Cosmos.SigningOutput
 class TestBandChainSigner {
 
     init {
-        System.loadLibrary("TrustWalletCore")
+        System.loadLibrary("TrusTWalletCore")
     }
 
     @Test
@@ -35,14 +35,14 @@ class TestBandChainSigner {
             denom = "uband"
         }.build()
 
-        val sendCoinsMsg = Cosmos.Message.Send.newBuilder().apply {
+        val sendCoinsMTW = Cosmos.Message.Send.newBuilder().apply {
             fromAddress = from
-            toAddress = "band1jf9aaj9myrzsnmpdr7twecnaftzmku2mgms4n3"
+            toAddress = "band1jf9aaj9myrzsnmpdr7TWecnaftzmku2mgms4n3"
             addAllAmounts(listOf(txAmount))
         }.build()
 
         val message = Cosmos.Message.newBuilder().apply {
-            sendCoinsMessage = sendCoinsMsg
+            sendCoinsMessage = sendCoinsMTW
         }.build()
 
         val feeAmount = Cosmos.Amount.newBuilder().apply {
@@ -68,7 +68,7 @@ class TestBandChainSigner {
         val output = AnySigner.sign(signingInput, BANDCHAIN, SigningOutput.parser())
         val jsonPayload = output.json
 
-        val expectedJsonPayload = """{"mode":"block","tx":{"fee":{"amount":[{"amount":"200","denom":"uband"}],"gas":"200000"},"memo":"","msg":[{"type":"cosmos-sdk/MsgSend","value":{"amount":[{"amount":"1","denom":"uband"}],"from_address":"band1hsk6jryyqjfhp5dhc55tc9jtckygx0epw4d0hz","to_address":"band1jf9aaj9myrzsnmpdr7twecnaftzmku2mgms4n3"}}],"signatures":[{"pub_key":{"type":"tendermint/PubKeySecp256k1","value":"AlcobsPzfTNVe7uqAAsndErJAjqplnyudaGB0f+R+p3F"},"signature":"B1ZG7pUWW2mPxE7WzBt8SafZMtEtFWgUJePJ+Dj/q7cHxj4scGmopQUG4+AZcJbRQgjrMGM11Yhm3vXYQYtSDA=="}]}}"""
+        val expectedJsonPayload = """{"mode":"block","tx":{"fee":{"amount":[{"amount":"200","denom":"uband"}],"gas":"200000"},"memo":"","mTW":[{"type":"cosmos-sdk/MTWSend","value":{"amount":[{"amount":"1","denom":"uband"}],"from_address":"band1hsk6jryyqjfhp5dhc55tc9jtckygx0epw4d0hz","to_address":"band1jf9aaj9myrzsnmpdr7TWecnaftzmku2mgms4n3"}}],"signatures":[{"pub_key":{"type":"tendermint/PubKeySecp256k1","value":"AlcobsPzfTNVe7uqAAsndErJAjqplnyudaGB0f+R+p3F"},"signature":"B1ZG7pUWW2mPxE7WzBt8SafZMtEtFWgUJePJ+Dj/q7cHxj4scGmopQUG4+AZcJbRQgjrMGM11Yhm3vXYQYtSDA=="}]}}"""
         assertEquals(expectedJsonPayload, jsonPayload)
 
     }
@@ -89,7 +89,7 @@ class TestBandChainSigner {
             "memo": "Testing",
             "messages": [{
                 "sendCoinsMessage": {
-                    "fromAddress": "band1jf9aaj9myrzsnmpdr7twecnaftzmku2mgms4n3",
+                    "fromAddress": "band1jf9aaj9myrzsnmpdr7TWecnaftzmku2mgms4n3",
                     "toAddress": "band1pnndgfwsrff86263xzpc5cd3t6yfvgjyqc87jh",
                     "amounts": [{
                         "denom": "uband",
@@ -102,6 +102,6 @@ class TestBandChainSigner {
         val key = "c9b0a273831931aa4a5f8d1a570d5021dda91d3319bd3819becdaabfb7b44e3b".toHexByteArray()
         val result = AnySigner.signJSON(json, key, BANDCHAIN.value())
 
-        assertEquals(result, """{"mode":"block","tx":{"fee":{"amount":[{"amount":"5000","denom":"uband"}],"gas":"200000"},"memo":"Testing","msg":[{"type":"cosmos-sdk/MsgSend","value":{"amount":[{"amount":"995000","denom":"uband"}],"from_address":"band1jf9aaj9myrzsnmpdr7twecnaftzmku2mgms4n3","to_address":"band1pnndgfwsrff86263xzpc5cd3t6yfvgjyqc87jh"}}],"signatures":[{"pub_key":{"type":"tendermint/PubKeySecp256k1","value":"A6EsukEXB53GhohQVeDpxtkeH8KQIayd/Co/ApYRYkTm"},"signature":"sw2YPxjQ5DiKjd2o70sQb44OSzMH2Pm4V+Z8ld1uYiNbMXWQBK8SH2tcKUIU3SwYZ1qvi2DbmxqHyONksJ0Rmg=="}]}}""")
+        assertEquals(result, """{"mode":"block","tx":{"fee":{"amount":[{"amount":"5000","denom":"uband"}],"gas":"200000"},"memo":"Testing","mTW":[{"type":"cosmos-sdk/MTWSend","value":{"amount":[{"amount":"995000","denom":"uband"}],"from_address":"band1jf9aaj9myrzsnmpdr7TWecnaftzmku2mgms4n3","to_address":"band1pnndgfwsrff86263xzpc5cd3t6yfvgjyqc87jh"}}],"signatures":[{"pub_key":{"type":"tendermint/PubKeySecp256k1","value":"A6EsukEXB53GhohQVeDpxtkeH8KQIayd/Co/ApYRYkTm"},"signature":"sw2YPxjQ5DiKjd2o70sQb44OSzMH2Pm4V+Z8ld1uYiNbMXWQBK8SH2tcKUIU3SwYZ1qvi2DbmxqHyONksJ0Rmg=="}]}}""")
     }
 }

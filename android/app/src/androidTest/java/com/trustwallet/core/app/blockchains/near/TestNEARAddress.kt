@@ -1,4 +1,4 @@
-package com.trustwallet.core.app.blockchains.solana
+package com.trusTWallet.core.app.blockchains.solana
 
 import org.junit.Assert.assertEquals
 import org.junit.Test
@@ -7,7 +7,7 @@ import wallet.core.jni.*
 class TestNEARAddress {
 
     init {
-        System.loadLibrary("TrustWalletCore")
+        System.loadLibrary("TrusTWalletCore")
     }
 
     private val expectedAddressString = "917b3d268d4b58f7fec1b150bd68d69be3ee5d4cc39855e341538465bb77860d"

@@ -1,9 +1,9 @@
-package com.trustwallet.core.app.blockchains.aion
+package com.trusTWallet.core.app.blockchains.aion
 
 import com.google.protobuf.ByteString
-import com.trustwallet.core.app.utils.toHexByteArray
-import com.trustwallet.core.app.utils.toHex
-import com.trustwallet.core.app.utils.toHexBytesInByteString
+import com.trusTWallet.core.app.utils.toHexByteArray
+import com.trusTWallet.core.app.utils.toHex
+import com.trusTWallet.core.app.utils.toHexBytesInByteString
 import org.junit.Assert.assertEquals
 import org.junit.Test
 import wallet.core.java.AnySigner
@@ -17,7 +17,7 @@ import wallet.core.jni.proto.Aion.SigningOutput
 class TestAionAddress {
 
     init {
-        System.loadLibrary("TrustWalletCore")
+        System.loadLibrary("TrusTWalletCore")
     }
 
     @Test

@@ -1,9 +1,3 @@
-// Copyright © 2017-2020 Trust Wallet.
-//
-// This file is part of Trust. The full Trust copyright notice, including
-// terms governing use, modification, and redistribution, is contained in the
-// file LICENSE at the root of the source code distribution tree.
-
 #pragma once
 
 #include <string>
@@ -11,12 +5,12 @@
 /// refers to https://github.com/aeternity/aepp-sdk-go/blob/07aa8a77e5/aeternity/identifiers.go
 namespace TW::Aeternity::Identifiers {
 
-/// default network id
-static const std::string networkId = "ae_mainnet";
+/// default neTWork id
+static const std::string neTWorkId = "ae_mainnet";
 
 /// Base58 prefixes
 static const std::string prefixAccountPubkey = "ak_";
-static const std::string prefixSignature = "sg_";
+static const std::string prefixSignature = "TW_";
 
 /// Base 64 encoded transactions
 static const std::string prefixTransaction = "tx_";

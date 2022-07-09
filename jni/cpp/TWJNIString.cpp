@@ -16,7 +16,7 @@ jstring _Nonnull TWStringJString(TWString *_Nonnull string, JNIEnv *env) {
 
 TWString *_Nonnull TWStringCreateWithJString(JNIEnv *env, jstring _Nonnull string) {
     auto chars = env->GetStringUTFChars(string, nullptr);
-    auto twstring = TWStringCreateWithUTF8Bytes(chars);
+    auto TWstring = TWStringCreateWithUTF8Bytes(chars);
     env->ReleaseStringUTFChars(string, chars);
-    return twstring;
+    return TWstring;
 }

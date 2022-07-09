@@ -4,10 +4,10 @@
 // terms governing use, modification, and redistribution, is contained in the
 // file LICENSE at the root of the source code distribution tree.
 
-package com.trustwallet.core.app.blockchains.polkadot
+package com.trusTWallet.core.app.blockchains.polkadot
 
-import com.trustwallet.core.app.utils.Numeric
-import com.trustwallet.core.app.utils.toHexBytesInByteString
+import com.trusTWallet.core.app.utils.Numeric
+import com.trusTWallet.core.app.utils.toHexBytesInByteString
 import org.junit.Assert.assertEquals
 import org.junit.Test
 import wallet.core.java.AnySigner
@@ -18,7 +18,7 @@ import wallet.core.jni.proto.Polkadot.SigningOutput
 class TestKusamaSigner {
 
     init {
-        System.loadLibrary("TrustWalletCore")
+        System.loadLibrary("TrusTWalletCore")
     }
 
     @Test
@@ -27,7 +27,7 @@ class TestKusamaSigner {
         val hash = "0xb0a8d493285c2df73290dfb7e61f870f17b41801197a149ca93654499ea3dafe".toHexBytesInByteString()
 
         val call = Polkadot.Balance.Transfer.newBuilder().apply {
-            toAddress = "CtwdfrhECFs3FpvCGoiE4hwRC4UsSiM8WL899HjRdQbfYZY"
+            toAddress = "CTWdfrhECFs3FpvCGoiE4hwRC4UsSiM8WL899HjRdQbfYZY"
             value = "0x02540be400".toHexBytesInByteString()
         }
 
@@ -36,7 +36,7 @@ class TestKusamaSigner {
             blockHash = hash
             nonce = 1
             specVersion = 2019
-            network = Polkadot.Network.KUSAMA
+            neTWork = Polkadot.NeTWork.KUSAMA
             transactionVersion = 2
             privateKey = key
             balanceCall = Polkadot.Balance.newBuilder().apply {

@@ -7,7 +7,7 @@
 package ethereum
 
 import (
-	common "tw/protos/common"
+	common "TW/protos/common"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"
@@ -86,7 +86,7 @@ type Transaction struct {
 func (x *Transaction) Reset() {
 	*x = Transaction{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_Ethereum_proto_msgTypes[0]
+		mi := &file_Ethereum_proto_mTWTypes[0]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -99,7 +99,7 @@ func (x *Transaction) String() string {
 func (*Transaction) ProtoMessage() {}
 
 func (x *Transaction) ProtoReflect() protoreflect.Message {
-	mi := &file_Ethereum_proto_msgTypes[0]
+	mi := &file_Ethereum_proto_mTWTypes[0]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -239,7 +239,7 @@ type SigningInput struct {
 func (x *SigningInput) Reset() {
 	*x = SigningInput{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_Ethereum_proto_msgTypes[1]
+		mi := &file_Ethereum_proto_mTWTypes[1]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -252,7 +252,7 @@ func (x *SigningInput) String() string {
 func (*SigningInput) ProtoMessage() {}
 
 func (x *SigningInput) ProtoReflect() protoreflect.Message {
-	mi := &file_Ethereum_proto_msgTypes[1]
+	mi := &file_Ethereum_proto_mTWTypes[1]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -360,7 +360,7 @@ type SigningOutput struct {
 func (x *SigningOutput) Reset() {
 	*x = SigningOutput{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_Ethereum_proto_msgTypes[2]
+		mi := &file_Ethereum_proto_mTWTypes[2]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -373,7 +373,7 @@ func (x *SigningOutput) String() string {
 func (*SigningOutput) ProtoMessage() {}
 
 func (x *SigningOutput) ProtoReflect() protoreflect.Message {
-	mi := &file_Ethereum_proto_msgTypes[2]
+	mi := &file_Ethereum_proto_mTWTypes[2]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -453,7 +453,7 @@ type Transaction_Transfer struct {
 func (x *Transaction_Transfer) Reset() {
 	*x = Transaction_Transfer{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_Ethereum_proto_msgTypes[3]
+		mi := &file_Ethereum_proto_mTWTypes[3]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -466,7 +466,7 @@ func (x *Transaction_Transfer) String() string {
 func (*Transaction_Transfer) ProtoMessage() {}
 
 func (x *Transaction_Transfer) ProtoReflect() protoreflect.Message {
-	mi := &file_Ethereum_proto_msgTypes[3]
+	mi := &file_Ethereum_proto_mTWTypes[3]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -510,7 +510,7 @@ type Transaction_ERC20Transfer struct {
 func (x *Transaction_ERC20Transfer) Reset() {
 	*x = Transaction_ERC20Transfer{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_Ethereum_proto_msgTypes[4]
+		mi := &file_Ethereum_proto_mTWTypes[4]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -523,7 +523,7 @@ func (x *Transaction_ERC20Transfer) String() string {
 func (*Transaction_ERC20Transfer) ProtoMessage() {}
 
 func (x *Transaction_ERC20Transfer) ProtoReflect() protoreflect.Message {
-	mi := &file_Ethereum_proto_msgTypes[4]
+	mi := &file_Ethereum_proto_mTWTypes[4]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -567,7 +567,7 @@ type Transaction_ERC20Approve struct {
 func (x *Transaction_ERC20Approve) Reset() {
 	*x = Transaction_ERC20Approve{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_Ethereum_proto_msgTypes[5]
+		mi := &file_Ethereum_proto_mTWTypes[5]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -580,7 +580,7 @@ func (x *Transaction_ERC20Approve) String() string {
 func (*Transaction_ERC20Approve) ProtoMessage() {}
 
 func (x *Transaction_ERC20Approve) ProtoReflect() protoreflect.Message {
-	mi := &file_Ethereum_proto_msgTypes[5]
+	mi := &file_Ethereum_proto_mTWTypes[5]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -625,7 +625,7 @@ type Transaction_ERC721Transfer struct {
 func (x *Transaction_ERC721Transfer) Reset() {
 	*x = Transaction_ERC721Transfer{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_Ethereum_proto_msgTypes[6]
+		mi := &file_Ethereum_proto_mTWTypes[6]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -638,7 +638,7 @@ func (x *Transaction_ERC721Transfer) String() string {
 func (*Transaction_ERC721Transfer) ProtoMessage() {}
 
 func (x *Transaction_ERC721Transfer) ProtoReflect() protoreflect.Message {
-	mi := &file_Ethereum_proto_msgTypes[6]
+	mi := &file_Ethereum_proto_mTWTypes[6]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -693,7 +693,7 @@ type Transaction_ERC1155Transfer struct {
 func (x *Transaction_ERC1155Transfer) Reset() {
 	*x = Transaction_ERC1155Transfer{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_Ethereum_proto_msgTypes[7]
+		mi := &file_Ethereum_proto_mTWTypes[7]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -706,7 +706,7 @@ func (x *Transaction_ERC1155Transfer) String() string {
 func (*Transaction_ERC1155Transfer) ProtoMessage() {}
 
 func (x *Transaction_ERC1155Transfer) ProtoReflect() protoreflect.Message {
-	mi := &file_Ethereum_proto_msgTypes[7]
+	mi := &file_Ethereum_proto_mTWTypes[7]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -772,7 +772,7 @@ type Transaction_ContractGeneric struct {
 func (x *Transaction_ContractGeneric) Reset() {
 	*x = Transaction_ContractGeneric{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_Ethereum_proto_msgTypes[8]
+		mi := &file_Ethereum_proto_mTWTypes[8]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -785,7 +785,7 @@ func (x *Transaction_ContractGeneric) String() string {
 func (*Transaction_ContractGeneric) ProtoMessage() {}
 
 func (x *Transaction_ContractGeneric) ProtoReflect() protoreflect.Message {
-	mi := &file_Ethereum_proto_msgTypes[8]
+	mi := &file_Ethereum_proto_mTWTypes[8]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -940,13 +940,13 @@ var (
 
 func file_Ethereum_proto_rawDescGZIP() []byte {
 	file_Ethereum_proto_rawDescOnce.Do(func() {
-		file_Ethereum_proto_rawDescData = protoimpl.X.CompressGZIP(file_Ethereum_proto_rawDescData)
+		file_Ethereum_proto_rawDescData = protoimpl.X.CompresTWZIP(file_Ethereum_proto_rawDescData)
 	})
 	return file_Ethereum_proto_rawDescData
 }
 
 var file_Ethereum_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
-var file_Ethereum_proto_msgTypes = make([]protoimpl.MessageInfo, 9)
+var file_Ethereum_proto_mTWTypes = make([]protoimpl.MessageInfo, 9)
 var file_Ethereum_proto_goTypes = []interface{}{
 	(TransactionMode)(0),                // 0: TW.Ethereum.Proto.TransactionMode
 	(*Transaction)(nil),                 // 1: TW.Ethereum.Proto.Transaction
@@ -983,7 +983,7 @@ func file_Ethereum_proto_init() {
 		return
 	}
 	if !protoimpl.UnsafeEnabled {
-		file_Ethereum_proto_msgTypes[0].Exporter = func(v interface{}, i int) interface{} {
+		file_Ethereum_proto_mTWTypes[0].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*Transaction); i {
 			case 0:
 				return &v.state
@@ -995,7 +995,7 @@ func file_Ethereum_proto_init() {
 				return nil
 			}
 		}
-		file_Ethereum_proto_msgTypes[1].Exporter = func(v interface{}, i int) interface{} {
+		file_Ethereum_proto_mTWTypes[1].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*SigningInput); i {
 			case 0:
 				return &v.state
@@ -1007,7 +1007,7 @@ func file_Ethereum_proto_init() {
 				return nil
 			}
 		}
-		file_Ethereum_proto_msgTypes[2].Exporter = func(v interface{}, i int) interface{} {
+		file_Ethereum_proto_mTWTypes[2].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*SigningOutput); i {
 			case 0:
 				return &v.state
@@ -1019,7 +1019,7 @@ func file_Ethereum_proto_init() {
 				return nil
 			}
 		}
-		file_Ethereum_proto_msgTypes[3].Exporter = func(v interface{}, i int) interface{} {
+		file_Ethereum_proto_mTWTypes[3].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*Transaction_Transfer); i {
 			case 0:
 				return &v.state
@@ -1031,7 +1031,7 @@ func file_Ethereum_proto_init() {
 				return nil
 			}
 		}
-		file_Ethereum_proto_msgTypes[4].Exporter = func(v interface{}, i int) interface{} {
+		file_Ethereum_proto_mTWTypes[4].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*Transaction_ERC20Transfer); i {
 			case 0:
 				return &v.state
@@ -1043,7 +1043,7 @@ func file_Ethereum_proto_init() {
 				return nil
 			}
 		}
-		file_Ethereum_proto_msgTypes[5].Exporter = func(v interface{}, i int) interface{} {
+		file_Ethereum_proto_mTWTypes[5].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*Transaction_ERC20Approve); i {
 			case 0:
 				return &v.state
@@ -1055,7 +1055,7 @@ func file_Ethereum_proto_init() {
 				return nil
 			}
 		}
-		file_Ethereum_proto_msgTypes[6].Exporter = func(v interface{}, i int) interface{} {
+		file_Ethereum_proto_mTWTypes[6].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*Transaction_ERC721Transfer); i {
 			case 0:
 				return &v.state
@@ -1067,7 +1067,7 @@ func file_Ethereum_proto_init() {
 				return nil
 			}
 		}
-		file_Ethereum_proto_msgTypes[7].Exporter = func(v interface{}, i int) interface{} {
+		file_Ethereum_proto_mTWTypes[7].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*Transaction_ERC1155Transfer); i {
 			case 0:
 				return &v.state
@@ -1079,7 +1079,7 @@ func file_Ethereum_proto_init() {
 				return nil
 			}
 		}
-		file_Ethereum_proto_msgTypes[8].Exporter = func(v interface{}, i int) interface{} {
+		file_Ethereum_proto_mTWTypes[8].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*Transaction_ContractGeneric); i {
 			case 0:
 				return &v.state
@@ -1092,7 +1092,7 @@ func file_Ethereum_proto_init() {
 			}
 		}
 	}
-	file_Ethereum_proto_msgTypes[0].OneofWrappers = []interface{}{
+	file_Ethereum_proto_mTWTypes[0].OneofWrappers = []interface{}{
 		(*Transaction_Transfer_)(nil),
 		(*Transaction_Erc20Transfer)(nil),
 		(*Transaction_Erc20Approve)(nil),
@@ -1113,7 +1113,7 @@ func file_Ethereum_proto_init() {
 		GoTypes:           file_Ethereum_proto_goTypes,
 		DependencyIndexes: file_Ethereum_proto_depIdxs,
 		EnumInfos:         file_Ethereum_proto_enumTypes,
-		MessageInfos:      file_Ethereum_proto_msgTypes,
+		MessageInfos:      file_Ethereum_proto_mTWTypes,
 	}.Build()
 	File_Ethereum_proto = out.File
 	file_Ethereum_proto_rawDesc = nil

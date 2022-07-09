@@ -1,6 +1,6 @@
 apply plugin: 'com.android.library'
 apply plugin: 'maven-publish'
-group='com.github.trustwallet'
+group='com.github.trusTWallet'
 
 android {
     compileSdkVersion 32

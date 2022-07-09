@@ -1,8 +1,8 @@
-package com.trustwallet.core.app.blockchains.filecoin
+package com.trusTWallet.core.app.blockchains.filecoin
 
 import com.google.protobuf.ByteString
-import com.trustwallet.core.app.utils.toHexByteArray
-import com.trustwallet.core.app.utils.toHexBytesInByteString
+import com.trusTWallet.core.app.utils.toHexByteArray
+import com.trusTWallet.core.app.utils.toHexBytesInByteString
 import org.junit.Assert.assertEquals
 import org.junit.Test
 import wallet.core.java.AnySigner
@@ -16,7 +16,7 @@ import wallet.core.jni.proto.Filecoin.SigningOutput
 class TestFilecoin {
 
     init {
-        System.loadLibrary("TrustWalletCore")
+        System.loadLibrary("TrusTWalletCore")
     }
 
     @Test

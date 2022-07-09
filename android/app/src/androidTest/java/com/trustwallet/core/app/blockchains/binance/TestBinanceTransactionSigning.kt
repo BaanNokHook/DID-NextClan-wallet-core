@@ -1,20 +1,20 @@
-package com.trustwallet.core.app.blockchains.binance
+package com.trusTWallet.core.app.blockchains.binance
 
 import com.google.protobuf.ByteString
-import com.trustwallet.core.app.utils.toHexBytes
+import com.trusTWallet.core.app.utils.toHexBytes
 import org.junit.Assert.assertEquals
 import org.junit.Test
 import wallet.core.jni.proto.Binance
 import wallet.core.jni.proto.Binance.SigningOutput
 import wallet.core.jni.*
-import com.trustwallet.core.app.utils.toHex
+import com.trusTWallet.core.app.utils.toHex
 import wallet.core.jni.CoinType.BINANCE
 import wallet.core.java.AnySigner
 
 class TestBinanceTransactionSigning {
 
     init {
-        System.loadLibrary("TrustWalletCore")
+        System.loadLibrary("TrusTWalletCore")
     }
 
     val testKey = PrivateKey("eeba3f6f2db26ced519a3d4c43afff101db957a21d54d25dc7fd235c404d7a5d".toHexBytes())
@@ -40,7 +40,7 @@ class TestBinanceTransactionSigning {
         input.addAllCoins(listOf(token.build()))
 
         val output =  Binance.SendOrder.Output.newBuilder()
-        output.address = ByteString.copyFrom(AnyAddress("bnb1hlly02l6ahjsgxw9wlcswnlwdhg4xhx38yxpd5", BINANCE).data())
+        output.address = ByteString.copyFrom(AnyAddress("bnb1hlly02l6ahjTWxw9wlcswnlwdhg4xhx38yxpd5", BINANCE).data())
         output.addAllCoins(listOf(token.build()))
 
         val sendOrder = Binance.SendOrder.newBuilder()

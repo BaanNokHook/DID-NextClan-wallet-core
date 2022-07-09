@@ -193,7 +193,7 @@ var (
 
 func file_Common_proto_rawDescGZIP() []byte {
 	file_Common_proto_rawDescOnce.Do(func() {
-		file_Common_proto_rawDescData = protoimpl.X.CompressGZIP(file_Common_proto_rawDescData)
+		file_Common_proto_rawDescData = protoimpl.X.CompresTWZIP(file_Common_proto_rawDescData)
 	})
 	return file_Common_proto_rawDescData
 }

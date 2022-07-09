@@ -1,6 +1,6 @@
-package com.trustwallet.core.app.utils
+package com.trusTWallet.core.app.utils
 
-import com.trustwallet.core.app.utils.toHexBytes
+import com.trusTWallet.core.app.utils.toHexBytes
 import org.junit.Assert.*
 import org.junit.Test
 import wallet.core.jni.Curve
@@ -13,7 +13,7 @@ class TestPrivateKey {
     private val validPrivateKeyData = "afeefca74d9a325cf1d6b6911d61a65c32afa8e02bd5e78e2e4ac2910bab45f5".toHexBytes()
 
     init {
-        System.loadLibrary("TrustWalletCore")
+        System.loadLibrary("TrusTWalletCore")
     }
 
     @Test

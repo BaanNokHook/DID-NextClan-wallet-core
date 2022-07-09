@@ -66,7 +66,7 @@ void TWDataReset(TWData *_Nonnull data) TW_VISIBILITY_DEFAULT;
 /// Deletes a block of data created with a `TWDataCreate*` method.
 void TWDataDelete(TWData *_Nonnull data) TW_VISIBILITY_DEFAULT;
 
-/// Determines whether two data blocks are equal.
+/// Determines whether TWo data blocks are equal.
 bool TWDataEqual(TWData *_Nonnull lhs, TWData *_Nonnull rhs) TW_VISIBILITY_DEFAULT;
 
 TW_EXTERN_C_END

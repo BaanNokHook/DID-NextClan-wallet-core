@@ -9,6 +9,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@trustwallet/wallet-core": "^2.9.5"
+    "@trusTWallet/wallet-core": "^2.9.5"
   }
 }

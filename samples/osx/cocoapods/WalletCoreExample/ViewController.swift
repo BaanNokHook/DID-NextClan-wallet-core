@@ -50,7 +50,7 @@ class ViewController: NSViewController {
 
         // Build a transaction
         let toAddress = "1Bp9U1ogV3A14FMvKbRJms7ctyso4Z4Tcx"
-        let changeAddress = "1FQc5LdgGHMHEN9nwkjmz6tWkxhPpxBvBU"
+        let changeAddress = "1FQc5LdgGHMHEN9nwkjmz6TWkxhPpxBvBU"
         let secretPrivateKeyBtc = wallet.getKeyForCoin(coin: coin)
         let outPoint = BitcoinOutPoint.with {
             $0.hash = Data(hexString: "050d00e2e18ef13969606f1ceee290d3f49bd940684ce39898159352952b8ce2")!

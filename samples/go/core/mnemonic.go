@@ -1,11 +1,11 @@
 package core
 
 // #cgo CFLAGS: -I../../../include
-// #cgo LDFLAGS: -L../../../build -L../../../build/trezor-crypto -lTrustWalletCore -lprotobuf -lTrezorCrypto -lstdc++ -lm
-// #include <TrustWalletCore/TWMnemonic.h>
+// #cgo LDFLAGS: -L../../../build -L../../../build/trezor-crypto -lTrusTWalletCore -lprotobuf -lTrezorCrypto -lstdc++ -lm
+// #include <TrusTWalletCore/TWMnemonic.h>
 import "C"
 
-import "tw/types"
+import "TW/types"
 
 func IsMnemonicValid(mn string) bool {
 	str := types.TWStringCreateWithGoString(mn)

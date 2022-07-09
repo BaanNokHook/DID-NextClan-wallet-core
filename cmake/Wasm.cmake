@@ -6,7 +6,7 @@
 
 cmake_minimum_required(VERSION 3.8 FATAL_ERROR)
 
-project(TrustWalletCore)
+project(TrusTWalletCore)
 
 include(GNUInstallDirs)
 
@@ -45,18 +45,18 @@ find_package(Boost)
 include(cmake/Protobuf.cmake)
 
 file(GLOB_RECURSE sources src/*.c src/*.cc src/*.cpp src/*.h)
-add_library(TrustWalletCore ${sources} ${PROTO_SRCS} ${PROTO_HDRS})
+add_library(TrusTWalletCore ${sources} ${PROTO_SRCS} ${PROTO_HDRS})
 
-target_link_libraries(TrustWalletCore PRIVATE TrezorCrypto protobuf Boost::boost)
-target_compile_options(TrustWalletCore PRIVATE "-Wall")
+target_link_libraries(TrusTWalletCore PRIVATE TrezorCrypto protobuf Boost::boost)
+target_compile_options(TrusTWalletCore PRIVATE "-Wall")
 
-set_target_properties(TrustWalletCore
+set_target_properties(TrusTWalletCore
     PROPERTIES
     CXX_STANDARD 17
     CXX_STANDARD_REQUIRED ON
 )
 
-target_include_directories(TrustWalletCore
+target_include_directories(TrusTWalletCore
     PUBLIC
         $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
         $<INSTALL_INTERFACE:include>
@@ -65,7 +65,7 @@ target_include_directories(TrustWalletCore
         ${CMAKE_CURRENT_SOURCE_DIR}/build/local/include
 )
 
-install(TARGETS TrustWalletCore
+install(TARGETS TrusTWalletCore
     LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
     ARCHIVE DESTINATION ${CMAKE_INSTALL_LIBDIR}
 )

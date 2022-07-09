@@ -3,20 +3,20 @@
 #include "Address.h"
 #include "Signer.h"
 
-using namespace TW::Aeternity;
+using namespace SW::Aeternity;
 using namespace std;
 
 // Note: avoid business logic from here, rather just call into classes like Address, Signer, etc.
 
-bool Entry::validateAddress(TWCoinType coin, const string& address, TW::byte, TW::byte, const char*) const {
+bool Entry::validateAddress(SWCoinType coin, const string& address, SW::byte, SW::byte, const char*) const {
     return Address::isValid(address);
 }
 
-string Entry::deriveAddress(TWCoinType coin, const PublicKey& publicKey, TW::byte, const char*) const {
+string Entry::deriveAddress(SWCoinType coin, const PublicKey& publicKey, SW::byte, const char*) const {
     return Address(publicKey).string();
 }
 
-void Entry::sign(TWCoinType coin, const TW::Data& dataIn, TW::Data& dataOut) const {
+void Entry::sign(SWCoinType coin, const SW::Data& dataIn, SW::Data& dataOut) const {
     signTemplate<Signer, Proto::SigningInput>(dataIn, dataOut);
 }
 

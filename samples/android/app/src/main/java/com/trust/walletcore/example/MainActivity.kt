@@ -19,7 +19,7 @@ import kotlin.experimental.and
 class MainActivity : AppCompatActivity() {
 
     init {
-        System.loadLibrary("TrustWalletCore")
+        System.loadLibrary("TrusTWalletCore")
     }
 
     private val seedPhrase = "ripple scissors kick mammal hire column oak again sun offer wealth tomorrow wagon turn fatal"
@@ -68,7 +68,7 @@ class MainActivity : AppCompatActivity() {
         val utxoTxId = "050d00e2e18ef13969606f1ceee290d3f49bd940684ce39898159352952b8ce2".hexStringToByteArray();
         val secretPrivateKeyBtc = wallet.getKeyForCoin(coinBtc)
         val toAddress = "1Bp9U1ogV3A14FMvKbRJms7ctyso4Z4Tcx"
-        val changeAddress = "1FQc5LdgGHMHEN9nwkjmz6tWkxhPpxBvBU"
+        val changeAddress = "1FQc5LdgGHMHEN9nwkjmz6TWkxhPpxBvBU"
         val script = BitcoinScript.lockScriptForAddress(addressBtc, coinBtc).data()
 
         val outPoint = Bitcoin.OutPoint.newBuilder().apply {
