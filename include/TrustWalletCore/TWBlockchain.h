@@ -43,8 +43,8 @@ enum TWBlockchain {
     TWBlockchainCardano = 30,
     TWBlockchainNEO = 31,
     TWBlockchainFilecoin = 32,
-    TWBlockchainElrondNetwork = 33,
-    TWBlockchainOasisNetwork = 34,
+    TWBlockchainElrondNeTWork = 33,
+    TWBlockchainOasisNeTWork = 34,
     TWBlockchainDecred = 35, // Bitcoin
     TWBlockchainZcash = 36, // Bitcoin
     TWBlockchainGroestlcoin = 37, // Bitcoin

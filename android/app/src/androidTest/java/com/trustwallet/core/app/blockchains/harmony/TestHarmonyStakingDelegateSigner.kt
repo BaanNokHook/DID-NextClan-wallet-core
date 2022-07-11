@@ -1,8 +1,8 @@
-package com.trustwallet.core.app.blockchains.harmony
+package com.trusTWallet.core.app.blockchains.harmony
 
 import com.google.protobuf.ByteString
-import com.trustwallet.core.app.utils.Numeric
-import com.trustwallet.core.app.utils.toHexByteArray
+import com.trusTWallet.core.app.utils.Numeric
+import com.trusTWallet.core.app.utils.toHexByteArray
 import org.junit.Assert.assertEquals
 import org.junit.Test
 import wallet.core.java.AnySigner
@@ -19,7 +19,7 @@ class TestHarmonyStakingDelegateSigner {
     val blsSigData = ByteString.copyFrom("4252b0f1210efb0d5061e8a706a7ea9d62292a7947a975472fb77e1af7278a1c3c2e6eeba73c0581ece398613829940df129f3071c9a24b4b448bb1e880dc5872a58cb07eed94294c4e01a5c864771cafef7b96be541cb3c521a98f01838dd94".toHexByteArray())
 
     init {
-        System.loadLibrary("TrustWalletCore")
+        System.loadLibrary("TrusTWalletCore")
     }
 
     fun createValidator(): Harmony.DirectiveCreateValidator.Builder {

@@ -1,8 +1,8 @@
-package com.trustwallet.core.app.blockchains.nuls
+package com.trusTWallet.core.app.blockchains.nuls
 
 import com.google.protobuf.ByteString
-import com.trustwallet.core.app.utils.Numeric
-import com.trustwallet.core.app.utils.toHexByteArray
+import com.trusTWallet.core.app.utils.Numeric
+import com.trusTWallet.core.app.utils.toHexByteArray
 import org.junit.Assert.assertEquals
 import org.junit.Test
 import wallet.core.jni.CoinType
@@ -13,7 +13,7 @@ import wallet.core.jni.proto.NULS.SigningOutput
 class TestNULSSigner {
 
     init {
-        System.loadLibrary("TrustWalletCore")
+        System.loadLibrary("TrusTWalletCore")
     }
 
     @Test

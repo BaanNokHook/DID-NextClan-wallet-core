@@ -27,4 +27,4 @@
 
 If you're adding a new blockchain
 
-- [ ] I have read the [guidelines](https://developer.trustwallet.com/wallet-core/newblockchain#integration-criteria) for adding a new blockchain.
+- [ ] I have read the [guidelines](https://developer.trusTWallet.com/wallet-core/newblockchain#integration-criteria) for adding a new blockchain.

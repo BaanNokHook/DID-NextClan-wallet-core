@@ -78,16 +78,16 @@ set(protobuf_SOURCE_FILES
   ${protobuf_source_dir}/src/google/protobuf/util/field_comparator.cc
   ${protobuf_source_dir}/src/google/protobuf/util/field_mask_util.cc
   ${protobuf_source_dir}/src/google/protobuf/util/internal/datapiece.cc
-  ${protobuf_source_dir}/src/google/protobuf/util/internal/default_value_objectwriter.cc
+  ${protobuf_source_dir}/src/google/protobuf/util/internal/default_value_objecTWriter.cc
   ${protobuf_source_dir}/src/google/protobuf/util/internal/error_listener.cc
   ${protobuf_source_dir}/src/google/protobuf/util/internal/field_mask_utility.cc
   ${protobuf_source_dir}/src/google/protobuf/util/internal/json_escaping.cc
-  ${protobuf_source_dir}/src/google/protobuf/util/internal/json_objectwriter.cc
+  ${protobuf_source_dir}/src/google/protobuf/util/internal/json_objecTWriter.cc
   ${protobuf_source_dir}/src/google/protobuf/util/internal/json_stream_parser.cc
   ${protobuf_source_dir}/src/google/protobuf/util/internal/object_writer.cc
   ${protobuf_source_dir}/src/google/protobuf/util/internal/proto_writer.cc
   ${protobuf_source_dir}/src/google/protobuf/util/internal/protostream_objectsource.cc
-  ${protobuf_source_dir}/src/google/protobuf/util/internal/protostream_objectwriter.cc
+  ${protobuf_source_dir}/src/google/protobuf/util/internal/protostream_objecTWriter.cc
   ${protobuf_source_dir}/src/google/protobuf/util/internal/type_info.cc
   ${protobuf_source_dir}/src/google/protobuf/util/internal/utility.cc
   ${protobuf_source_dir}/src/google/protobuf/util/json_util.cc

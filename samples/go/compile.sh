@@ -14,14 +14,14 @@ for FILE in "$PROTO_PATH"/*.proto; do
   # Generate Go protobuf files
   # 
   # manual --go_opt=M... declarations is because of
-  # dependencies between some proto files
+  # dependencies beTWeen some proto files
   mkdir protos/"$PKG"
   protoc -I=$PROTO_PATH --go_out=protos/"$PKG" \
     --go_opt=paths=source_relative \
-    --go_opt=M"$FILE_NAME"=tw/protos/"$PKG" \
-    --go_opt=MCommon.proto=tw/protos/common \
-    --go_opt=MBitcoin.proto=tw/protos/bitcoin \
-    --go_opt=MEthereum.proto=tw/protos/ethereum \
-    --go_opt=MBinance.proto=tw/protos/binance \
+    --go_opt=M"$FILE_NAME"=TW/protos/"$PKG" \
+    --go_opt=MCommon.proto=TW/protos/common \
+    --go_opt=MBitcoin.proto=TW/protos/bitcoin \
+    --go_opt=MEthereum.proto=TW/protos/ethereum \
+    --go_opt=MBinance.proto=TW/protos/binance \
     "$PROTO_PATH"/"$FILE_NAME"
 done

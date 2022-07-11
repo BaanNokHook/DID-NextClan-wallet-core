@@ -1,15 +1,15 @@
 package core
 
 // #cgo CFLAGS: -I../../../include
-// #cgo LDFLAGS: -L../../../build -L../../../build/trezor-crypto -lTrustWalletCore -lprotobuf -lTrezorCrypto -lstdc++ -lm
-// #include <TrustWalletCore/TWHDWallet.h>
-// #include <TrustWalletCore/TWPrivateKey.h>
-// #include <TrustWalletCore/TWPublicKey.h>
+// #cgo LDFLAGS: -L../../../build -L../../../build/trezor-crypto -lTrusTWalletCore -lprotobuf -lTrezorCrypto -lstdc++ -lm
+// #include <TrusTWalletCore/TWHDWallet.h>
+// #include <TrusTWalletCore/TWPrivateKey.h>
+// #include <TrusTWalletCore/TWPublicKey.h>
 import "C"
 
 import (
 	"errors"
-	"tw/types"
+	"TW/types"
 )
 
 type Wallet struct {
@@ -19,7 +19,7 @@ type Wallet struct {
 	CoinType
 }
 
-func CreateWalletWithMnemonic(mn string, ct CoinType) (*Wallet, error) {
+func CreateWalleTWithMnemonic(mn string, ct CoinType) (*Wallet, error) {
 	if !IsMnemonicValid(mn) {
 		return nil, errors.New("mnemonic is not valid")
 	}
@@ -29,10 +29,10 @@ func CreateWalletWithMnemonic(mn string, ct CoinType) (*Wallet, error) {
 	defer C.TWStringDelete(str)
 	defer C.TWStringDelete(empty)
 
-	tw := C.TWHDWalletCreateWithMnemonic(str, empty)
-	defer C.TWHDWalletDelete(tw)
+	TW := C.TWHDWalletCreateWithMnemonic(str, empty)
+	defer C.TWHDWalletDelete(TW)
 
-	priKey := C.TWHDWalletGetKeyForCoin(tw, C.enum_TWCoinType(ct))
+	priKey := C.TWHDWalletGetKeyForCoin(TW, C.enum_TWCoinType(ct))
 	defer C.TWPrivateKeyDelete(priKey)
 	priKeyData := C.TWPrivateKeyData(priKey)
 	defer C.TWDataDelete(priKeyData)
@@ -42,7 +42,7 @@ func CreateWalletWithMnemonic(mn string, ct CoinType) (*Wallet, error) {
 	pubKeyData := C.TWPublicKeyData(pubKey)
 	defer C.TWDataDelete(pubKeyData)
 
-	address := C.TWHDWalletGetAddressForCoin(tw, C.enum_TWCoinType(ct))
+	address := C.TWHDWalletGetAddressForCoin(TW, C.enum_TWCoinType(ct))
 	defer C.TWStringDelete(address)
 
 	return &Wallet{

@@ -4,10 +4,10 @@
 // terms governing use, modification, and redistribution, is contained in the
 // file LICENSE at the root of the source code distribution tree.
 
-package com.trustwallet.core.app.blockchains.thorchain
+package com.trusTWallet.core.app.blockchains.thorchain
 
-import com.trustwallet.core.app.utils.toHex
-import com.trustwallet.core.app.utils.toHexByteArray
+import com.trusTWallet.core.app.utils.toHex
+import com.trusTWallet.core.app.utils.toHexByteArray
 import org.junit.Assert.assertEquals
 import org.junit.Test
 import wallet.core.jni.*
@@ -16,7 +16,7 @@ import wallet.core.jni.CoinType.THORCHAIN
 class TestTHORChainAddress {
 
     init {
-        System.loadLibrary("TrustWalletCore")
+        System.loadLibrary("TrusTWalletCore")
     }
 
     @Test

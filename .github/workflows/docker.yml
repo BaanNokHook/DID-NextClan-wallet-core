@@ -25,6 +25,6 @@ jobs:
     - name: Build Dockerfile
       uses: docker/build-push-action@v1.1.0
       with:
-        repository: trustwallet/wallet-core
+        repository: trusTWallet/wallet-core
         tags: latest
         push: false

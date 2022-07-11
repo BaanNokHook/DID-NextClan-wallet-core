@@ -4,15 +4,15 @@
 // terms governing use, modification, and redistribution, is contained in the
 // file LICENSE at the root of the source code distribution tree.
 
-package com.trustwallet.core.app.blockchains.osmosis
+package com.trusTWallet.core.app.blockchains.osmosis
 
 import android.util.Log
 import com.google.protobuf.ByteString
-import com.trustwallet.core.app.utils.Numeric
-import com.trustwallet.core.app.utils.toHexByteArray
-import com.trustwallet.core.app.utils.toHexBytes
-import com.trustwallet.core.app.utils.toHexBytesInByteString
-import com.trustwallet.core.app.utils.toHex
+import com.trusTWallet.core.app.utils.Numeric
+import com.trusTWallet.core.app.utils.toHexByteArray
+import com.trusTWallet.core.app.utils.toHexBytes
+import com.trusTWallet.core.app.utils.toHexBytesInByteString
+import com.trusTWallet.core.app.utils.toHex
 import org.junit.Assert.assertEquals
 import org.junit.Test
 import wallet.core.jni.*
@@ -25,7 +25,7 @@ import wallet.core.java.AnySigner
 class TestOsmosisSigner {
 
     init {
-        System.loadLibrary("TrustWalletCore")
+        System.loadLibrary("TrusTWalletCore")
     }
 
     @Test
@@ -39,14 +39,14 @@ class TestOsmosisSigner {
             denom = "uosmo"
         }.build()
 
-        val sendCoinsMsg = Cosmos.Message.Send.newBuilder().apply {
+        val sendCoinsMTW = Cosmos.Message.Send.newBuilder().apply {
             fromAddress = from
             toAddress = "osmo18s0hdnsllgcclweu9aymw4ngktr2k0rkvn7jmn"
             addAllAmounts(listOf(txAmount))
         }.build()
 
         val message = Cosmos.Message.newBuilder().apply {
-            sendCoinsMessage = sendCoinsMsg
+            sendCoinsMessage = sendCoinsMTW
         }.build()
 
         val feeAmount = Cosmos.Amount.newBuilder().apply {

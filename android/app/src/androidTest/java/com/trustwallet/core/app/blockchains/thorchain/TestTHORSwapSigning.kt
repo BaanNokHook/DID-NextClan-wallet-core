@@ -1,7 +1,7 @@
-package com.trustwallet.core.app.blockchains.thorchainswap
+package com.trusTWallet.core.app.blockchains.thorchainswap
 
 import com.google.protobuf.ByteString
-import com.trustwallet.core.app.utils.toHexByteArray
+import com.trusTWallet.core.app.utils.toHexByteArray
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertTrue
 import org.junit.Test
@@ -11,12 +11,12 @@ import wallet.core.jni.CoinType.ETHEREUM
 import wallet.core.jni.proto.Ethereum.SigningOutput
 import wallet.core.jni.proto.THORChainSwap
 import wallet.core.jni.THORChainSwap.buildSwap
-import com.trustwallet.core.app.utils.Numeric
+import com.trusTWallet.core.app.utils.Numeric
 
 class TestTHORChainSwap {
 
     init {
-        System.loadLibrary("TrustWalletCore")
+        System.loadLibrary("TrusTWalletCore")
     }
 
     @Test

@@ -1,4 +1,4 @@
-package com.trustwallet.core.app.utils
+package com.trusTWallet.core.app.utils
 
 import kotlin.experimental.and
 

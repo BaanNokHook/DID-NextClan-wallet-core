@@ -1,7 +1,7 @@
-package com.trustwallet.core.app.blockchains.eos
+package com.trusTWallet.core.app.blockchains.eos
 
 import com.google.protobuf.ByteString
-import com.trustwallet.core.app.utils.toHexByteArray
+import com.trusTWallet.core.app.utils.toHexByteArray
 import org.junit.Assert.*
 import org.junit.Test
 import org.json.JSONObject
@@ -15,7 +15,7 @@ import wallet.core.java.AnySigner
 class TestEOSSigning {
 
     init {
-        System.loadLibrary("TrustWalletCore")
+        System.loadLibrary("TrusTWalletCore")
     }
 
     @Test
@@ -28,11 +28,11 @@ class TestEOSSigning {
     fun testInvalidAddresses() {
         var addr = listOf(
             "abc",
-            "65QzSGJ579GPNKtZoZkChTzsxR4B48RCfiS82m2ymJR6VZCjTF",
-            "EOS65QzSGJ579GPNKtZoZkChTzsxR4B48RCfiS82m2ymJR6VZCjT",
-            "PUB_5hieQEFWh68h6bjaYAY25Ptd2bmqLCaFsunaneh9gZsmSgUBUe",
-            "PUB_K1_5hieQEFWh68h6bjaYAY25Ptd2bmqLCaFsunaneh9gZsmSgUBUe",
-            "PUB_K1_65QzSGJ579GPNKtZoZkChTzsxR4B48RCfiS82m2ymJR6VZCjTF"
+            "65QzTWJ579GPNKtZoZkChTzsxR4B48RCfiS82m2ymJR6VZCjTF",
+            "EOS65QzTWJ579GPNKtZoZkChTzsxR4B48RCfiS82m2ymJR6VZCjT",
+            "PUB_5hieQEFWh68h6bjaYAY25Ptd2bmqLCaFsunaneh9gZsmTWUBUe",
+            "PUB_K1_5hieQEFWh68h6bjaYAY25Ptd2bmqLCaFsunaneh9gZsmTWUBUe",
+            "PUB_K1_65QzTWJ579GPNKtZoZkChTzsxR4B48RCfiS82m2ymJR6VZCjTF"
         )
         addr.forEach {
             assertFalse(CoinType.EOS.validate(it))

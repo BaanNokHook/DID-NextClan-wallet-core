@@ -1,4 +1,4 @@
-package com.trustwallet.core.app.blockchains.harmony
+package com.trusTWallet.core.app.blockchains.harmony
 
 import org.junit.Assert.assertEquals
 import org.junit.Test
@@ -7,7 +7,7 @@ import wallet.core.jni.*
 class TestHarmonyAddress {
 
     init {
-        System.loadLibrary("TrustWalletCore")
+        System.loadLibrary("TrusTWalletCore")
     }
 
     val targetAddress = "one1a50tun737ulcvwy0yvve0pvu5skq0kjargvhwe"
@@ -23,7 +23,7 @@ class TestHarmonyAddress {
     @Test
     fun testAddressFromPublicKey() {
          val pubkey = PublicKey(
-             Base58.decodeNoCheck("RKjfnr3wMojEruvXZuvNDmL7UfLUiyU3vsBGoZ4k2qY8YzoEJDHLmXDWid9K6YDuGJ2u1fZ8E8JXDjk3KUuDXtwz"),
+             Base58.decodeNoCheck("RKjfnr3wMojEruvXZuvNDmL7UfLUiyU3vsBGoZ4k2qY8YzoEJDHLmXDWid9K6YDuGJ2u1fZ8E8JXDjk3KUuDXTWz"),
              PublicKeyType.SECP256K1EXTENDED
          )
          val address = AnyAddress(pubkey, CoinType.HARMONY)

@@ -1,7 +1,7 @@
-package com.trustwallet.core.app.blockchains.ontology
+package com.trusTWallet.core.app.blockchains.ontology
 
-import com.trustwallet.core.app.utils.Numeric
-import com.trustwallet.core.app.utils.toHexBytesInByteString
+import com.trusTWallet.core.app.utils.Numeric
+import com.trusTWallet.core.app.utils.toHexBytesInByteString
 import org.junit.Assert.assertEquals
 import org.junit.Test
 import wallet.core.java.AnySigner
@@ -11,7 +11,7 @@ import wallet.core.jni.proto.Ontology.SigningOutput
 
 class TestOntologySigning {
     init {
-        System.loadLibrary("TrustWalletCore")
+        System.loadLibrary("TrusTWalletCore")
     }
 
     @Test

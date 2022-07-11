@@ -1,8 +1,8 @@
-package com.trustwallet.core.app.blockchains.cosmos
+package com.trusTWallet.core.app.blockchains.cosmos
 
 import android.util.Log
 import com.google.protobuf.ByteString
-import com.trustwallet.core.app.utils.toHexByteArray
+import com.trusTWallet.core.app.utils.toHexByteArray
 import org.junit.Assert.assertEquals
 import org.junit.Test
 import wallet.core.jni.*
@@ -14,7 +14,7 @@ import wallet.core.java.AnySigner
 class TestKavaTransactions {
 
     init {
-        System.loadLibrary("TrustWalletCore")
+        System.loadLibrary("TrusTWalletCore")
     }
 
     @Test
@@ -65,7 +65,7 @@ class TestKavaTransactions {
         val output = AnySigner.sign(signingInput, KAVA, SigningOutput.parser())
         println(output.json)
 
-        val expectedJsonPayload = """{"mode":"block","tx":{"fee":{"amount":[{"amount":"100","denom":"ukava"}],"gas":"200000"},"memo":"","msg":[{"type":"withdraw_cdp","value":{"collateral":{"amount":"1000","denom":"bnb"},"collateral_type":"bnb-a","depositor":"kava1hsk6jryyqjfhp5dhc55tc9jtckygx0ept0esed","owner":"kava1hsk6jryyqjfhp5dhc55tc9jtckygx0ept0esed"}}],"signatures":[{"pub_key":{"type":"tendermint/PubKeySecp256k1","value":"AlcobsPzfTNVe7uqAAsndErJAjqplnyudaGB0f+R+p3F"},"signature":"TF31bcLSUDiQFa2Ul6AOuMsmQnPq0OfsSto+6AXhCIUETEZQRIXoK1BqyGeTjIKnJrkg/Jo4SOONJQKx2rDFIg=="}]}}"""
+        val expectedJsonPayload = """{"mode":"block","tx":{"fee":{"amount":[{"amount":"100","denom":"ukava"}],"gas":"200000"},"memo":"","mTW":[{"type":"withdraw_cdp","value":{"collateral":{"amount":"1000","denom":"bnb"},"collateral_type":"bnb-a","depositor":"kava1hsk6jryyqjfhp5dhc55tc9jtckygx0ept0esed","owner":"kava1hsk6jryyqjfhp5dhc55tc9jtckygx0ept0esed"}}],"signatures":[{"pub_key":{"type":"tendermint/PubKeySecp256k1","value":"AlcobsPzfTNVe7uqAAsndErJAjqplnyudaGB0f+R+p3F"},"signature":"TF31bcLSUDiQFa2Ul6AOuMsmQnPq0OfsSto+6AXhCIUETEZQRIXoK1BqyGeTjIKnJrkg/Jo4SOONJQKx2rDFIg=="}]}}"""
         assertEquals(expectedJsonPayload, output.json)
 
     }

@@ -1,6 +1,6 @@
-package com.trustwallet.core.app.blockchains.bitcoin
+package com.trusTWallet.core.app.blockchains.bitcoin
 
-import com.trustwallet.core.app.utils.Numeric
+import com.trusTWallet.core.app.utils.Numeric
 import wallet.core.jni.BitcoinScript
 import wallet.core.jni.BitcoinSigHashType
 import wallet.core.jni.CoinType

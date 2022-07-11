@@ -1,8 +1,8 @@
-package com.trustwallet.core.app.blockchains.ripple
+package com.trusTWallet.core.app.blockchains.ripple
 
 import com.google.protobuf.ByteString
-import com.trustwallet.core.app.utils.toHex
-import com.trustwallet.core.app.utils.toHexByteArray
+import com.trusTWallet.core.app.utils.toHex
+import com.trusTWallet.core.app.utils.toHexByteArray
 import org.junit.Assert.assertEquals
 import org.junit.Test
 import wallet.core.jni.PrivateKey
@@ -14,7 +14,7 @@ import wallet.core.jni.proto.Ripple.SigningOutput
 class TestRippleTransactionSigner {
 
     init {
-        System.loadLibrary("TrustWalletCore")
+        System.loadLibrary("TrusTWalletCore")
     }
 
     @Test

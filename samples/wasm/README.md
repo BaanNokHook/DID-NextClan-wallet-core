@@ -8,7 +8,7 @@
 
 ## Prerequisites
 
-1. Everything you need to build the wallet core: https://developer.trustwallet.com/wallet-core/developing-the-library/building
+1. Everything you need to build the wallet core: https://developer.trusTWallet.com/wallet-core/developing-the-library/building
 2. Install [emsdk](https://emscripten.org/docs/getting_started/downloads.html)
 - - python3
 - - cmake

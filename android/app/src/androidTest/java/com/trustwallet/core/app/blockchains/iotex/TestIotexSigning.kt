@@ -1,9 +1,9 @@
-package com.trustwallet.core.app.blockchains.IoTeX
+package com.trusTWallet.core.app.blockchains.IoTeX
 
 import com.google.protobuf.ByteString
-import com.trustwallet.core.app.utils.toHex
-import com.trustwallet.core.app.utils.Numeric
-import com.trustwallet.core.app.utils.toHexBytes
+import com.trusTWallet.core.app.utils.toHex
+import com.trusTWallet.core.app.utils.Numeric
+import com.trusTWallet.core.app.utils.toHexBytes
 import org.junit.Assert.assertEquals
 import org.junit.Test
 import wallet.core.java.AnySigner
@@ -14,7 +14,7 @@ import wallet.core.jni.proto.IoTeX.SigningOutput
 class TestIotexSigning {
 
     init {
-        System.loadLibrary("TrustWalletCore")
+        System.loadLibrary("TrusTWalletCore")
     }
     
     @Test

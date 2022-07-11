@@ -19,7 +19,7 @@ struct TWPublicKey;
 TW_EXPORT_CLASS
 struct TWRippleXAddress;
 
-/// Compares two addresses for equality.
+/// Compares TWo addresses for equality.
 TW_EXPORT_STATIC_METHOD
 bool TWRippleXAddressEqual(struct TWRippleXAddress *_Nonnull lhs, struct TWRippleXAddress *_Nonnull rhs);
 

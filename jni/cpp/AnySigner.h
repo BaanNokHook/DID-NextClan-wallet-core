@@ -8,7 +8,7 @@
 #define JNI_TW_ANYSIGNER_H
 
 #include <jni.h>
-#include <TrustWalletCore/TWBase.h>
+#include <TrusTWalletCore/TWBase.h>
 
 TW_EXTERN_C_BEGIN
 

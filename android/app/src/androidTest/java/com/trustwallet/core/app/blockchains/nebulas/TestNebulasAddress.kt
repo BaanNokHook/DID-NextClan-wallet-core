@@ -1,6 +1,6 @@
-package com.trustwallet.core.app.blockchains.nebulas
+package com.trusTWallet.core.app.blockchains.nebulas
 
-import com.trustwallet.core.app.utils.toHexByteArray
+import com.trusTWallet.core.app.utils.toHexByteArray
 import org.junit.Assert.assertEquals
 import org.junit.Test
 import wallet.core.jni.*
@@ -8,7 +8,7 @@ import wallet.core.jni.*
 class TestNebulasAddress {
 
     init {
-        System.loadLibrary("TrustWalletCore")
+        System.loadLibrary("TrusTWalletCore")
     }
 
     @Test

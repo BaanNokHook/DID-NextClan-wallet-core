@@ -1,4 +1,4 @@
-package com.trustwallet.core.app.blockchains
+package com.trusTWallet.core.app.blockchains
 
 import kotlinx.coroutines.*
 import org.junit.Assert.assertEquals
@@ -10,7 +10,7 @@ import wallet.core.jni.HDWallet
 class CoinAddressDerivationTests {
 
     init {
-        System.loadLibrary("TrustWalletCore")
+        System.loadLibrary("TrusTWalletCore")
     }
 
     @Test
@@ -69,9 +69,9 @@ class CoinAddressDerivationTests {
         THETA -> assertEquals("0x0d1fa20c218Fec2f2C55d52aB267940485fa5DA4", address)
         COSMOS -> assertEquals("cosmos142j9u5eaduzd7faumygud6ruhdwme98qsy2ekn", address)
         DECRED -> assertEquals("DsidJiDGceqHTyqiejABy1ZQ3FX4SiWZkYG", address)
-        DOGECOIN -> assertEquals("DJRFZNg8jkUtjcpo2zJd92FUAzwRjitw6f", address)
+        DOGECOIN -> assertEquals("DJRFZNg8jkUtjcpo2zJd92FUAzwRjiTW6f", address)
         KIN -> assertEquals("GBL3MT2ICHHM5OJ2QJ44CAHGDK6MLPINVXBKOKLHGBWQDVRWTWQ7U2EA", address)
-        VIACOIN -> assertEquals("via1qnmsgjd6cvfprnszdgmyg9kewtjfgqflz67wwhc", address)
+        VIACOIN -> assertEquals("via1qnmTWjd6cvfprnszdgmyg9kewtjfgqflz67wwhc", address)
         QTUM -> assertEquals("QhceuaTdeCZtcxmVc6yyEDEJ7Riu5gWFoF", address)
         NULS -> assertEquals("NULSd6HgU8MoRnNjBgvJpa9tqvGxYdv5ne4en", address)
         EOS -> assertEquals("EOS6hs8sRvGSzuQtq223zwJipMzqTJpXUVjyvHPvPwBSZWWrJTJkg", address)

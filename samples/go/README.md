@@ -1,9 +1,9 @@
-# Sample Go Integration for [Wallet-Core](https://github.com/trustwallet/wallet-core)
+# Sample Go Integration for [Wallet-Core](https://github.com/trusTWallet/wallet-core)
 
 ## 🔖 Overview
 
 This folder contains a small **Go** sample integration with
-[Wallet Core](https://github.com/trustwallet/wallet-core) library (part of [Trust Wallet](https://trustwallet.com)),
+[Wallet Core](https://github.com/trusTWallet/wallet-core) library (part of [Trust Wallet](https://trusTWallet.com)),
 using [cgo](https://golang.org/cmd/cgo/).
 
 ## ⚠️ DISCLAIMER
@@ -14,11 +14,11 @@ using [cgo](https://golang.org/cmd/cgo/).
 
 ## 📜 Documentation
 
-See the official [Trust Wallet developer documentation here](https://developer.trustwallet.com).
+See the official [Trust Wallet developer documentation here](https://developer.trusTWallet.com).
 
 See especially Wallet Core
-[Integration Guide](https://developer.trustwallet.com/wallet-core/integration-guide),
-and [Build Instructions](https://developer.trustwallet.com/wallet-core/building).
+[Integration Guide](https://developer.trusTWallet.com/wallet-core/integration-guide),
+and [Build Instructions](https://developer.trusTWallet.com/wallet-core/building).
 
 ## 🛠 Prerequisites
 
@@ -39,7 +39,7 @@ and [Build Instructions](https://developer.trustwallet.com/wallet-core/building)
 
 1. Clone the wallet-core repo and go inside:
 ```shell
-git clone https://github.com/trustwallet/wallet-core.git
+git clone https://github.com/trusTWallet/wallet-core.git
 
 cd wallet-core
 ```
@@ -49,7 +49,7 @@ cd wallet-core
 ```
 
 ### 🐳 Docker
-1. Run `docker run -it trustwallet/wallet-core`
+1. Run `docker run -it trusTWallet/wallet-core`
 The librabry is already built in this image  (Build instructions [here](building.md))  Note: may not be the most recent version.
 
 2. Install go: `apt-get update && apt-get install golang` 
@@ -73,4 +73,4 @@ cd wallet-core/samples/go
 ```
 4. *(optional)* You might want to copy and run `main` outside of the docker container, make sure you have `libc++1` and `libc++abi1` installed in your host Ubuntu.
 
-5. *(optional)* If you want to make transaction on other networks you need to compile `src/proto` proto files and to do that, just run the `./compile.sh` . you can also modify it based on your project.
+5. *(optional)* If you want to make transaction on other neTWorks you need to compile `src/proto` proto files and to do that, just run the `./compile.sh` . you can also modify it based on your project.

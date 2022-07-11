@@ -7,7 +7,7 @@
 package binance
 
 import (
-	common "tw/protos/common"
+	common "TW/protos/common"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"
@@ -28,7 +28,7 @@ type Transaction struct {
 
 	// int64 SIZE-OF-ENCODED      // varint encoded length of the structure after encoding
 	// 0xF0625DEE                  // prefix
-	Msgs       [][]byte `protobuf:"bytes,1,rep,name=msgs,proto3" json:"msgs,omitempty"`             // array of size 1, containing the transaction message, which are one of the transaction type below
+	MTWs       [][]byte `protobuf:"bytes,1,rep,name=mTWs,proto3" json:"mTWs,omitempty"`             // array of size 1, containing the transaction message, which are one of the transaction type below
 	Signatures [][]byte `protobuf:"bytes,2,rep,name=signatures,proto3" json:"signatures,omitempty"` // array of size 1, containing the standard signature structure of the transaction sender
 	Memo       string   `protobuf:"bytes,3,opt,name=memo,proto3" json:"memo,omitempty"`             // a short sentence of remark for the transaction, only for `Transfer` transactions.
 	Source     int64    `protobuf:"varint,4,opt,name=source,proto3" json:"source,omitempty"`        // an identifier for tools triggerring this transaction, set to zero if unwilling to disclose.
@@ -38,7 +38,7 @@ type Transaction struct {
 func (x *Transaction) Reset() {
 	*x = Transaction{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_Binance_proto_msgTypes[0]
+		mi := &file_Binance_proto_mTWTypes[0]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -51,7 +51,7 @@ func (x *Transaction) String() string {
 func (*Transaction) ProtoMessage() {}
 
 func (x *Transaction) ProtoReflect() protoreflect.Message {
-	mi := &file_Binance_proto_msgTypes[0]
+	mi := &file_Binance_proto_mTWTypes[0]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -67,9 +67,9 @@ func (*Transaction) Descriptor() ([]byte, []int) {
 	return file_Binance_proto_rawDescGZIP(), []int{0}
 }
 
-func (x *Transaction) GetMsgs() [][]byte {
+func (x *Transaction) GetMTWs() [][]byte {
 	if x != nil {
-		return x.Msgs
+		return x.MTWs
 	}
 	return nil
 }
@@ -116,7 +116,7 @@ type Signature struct {
 func (x *Signature) Reset() {
 	*x = Signature{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_Binance_proto_msgTypes[1]
+		mi := &file_Binance_proto_mTWTypes[1]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -129,7 +129,7 @@ func (x *Signature) String() string {
 func (*Signature) ProtoMessage() {}
 
 func (x *Signature) ProtoReflect() protoreflect.Message {
-	mi := &file_Binance_proto_msgTypes[1]
+	mi := &file_Binance_proto_mTWTypes[1]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -192,7 +192,7 @@ type TradeOrder struct {
 func (x *TradeOrder) Reset() {
 	*x = TradeOrder{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_Binance_proto_msgTypes[2]
+		mi := &file_Binance_proto_mTWTypes[2]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -205,7 +205,7 @@ func (x *TradeOrder) String() string {
 func (*TradeOrder) ProtoMessage() {}
 
 func (x *TradeOrder) ProtoReflect() protoreflect.Message {
-	mi := &file_Binance_proto_msgTypes[2]
+	mi := &file_Binance_proto_mTWTypes[2]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -291,7 +291,7 @@ type CancelTradeOrder struct {
 func (x *CancelTradeOrder) Reset() {
 	*x = CancelTradeOrder{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_Binance_proto_msgTypes[3]
+		mi := &file_Binance_proto_mTWTypes[3]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -304,7 +304,7 @@ func (x *CancelTradeOrder) String() string {
 func (*CancelTradeOrder) ProtoMessage() {}
 
 func (x *CancelTradeOrder) ProtoReflect() protoreflect.Message {
-	mi := &file_Binance_proto_msgTypes[3]
+	mi := &file_Binance_proto_mTWTypes[3]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -353,7 +353,7 @@ type SendOrder struct {
 func (x *SendOrder) Reset() {
 	*x = SendOrder{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_Binance_proto_msgTypes[4]
+		mi := &file_Binance_proto_mTWTypes[4]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -366,7 +366,7 @@ func (x *SendOrder) String() string {
 func (*SendOrder) ProtoMessage() {}
 
 func (x *SendOrder) ProtoReflect() protoreflect.Message {
-	mi := &file_Binance_proto_msgTypes[4]
+	mi := &file_Binance_proto_mTWTypes[4]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -412,7 +412,7 @@ type TokenIssueOrder struct {
 func (x *TokenIssueOrder) Reset() {
 	*x = TokenIssueOrder{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_Binance_proto_msgTypes[5]
+		mi := &file_Binance_proto_mTWTypes[5]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -425,7 +425,7 @@ func (x *TokenIssueOrder) String() string {
 func (*TokenIssueOrder) ProtoMessage() {}
 
 func (x *TokenIssueOrder) ProtoReflect() protoreflect.Message {
-	mi := &file_Binance_proto_msgTypes[5]
+	mi := &file_Binance_proto_mTWTypes[5]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -490,7 +490,7 @@ type TokenMintOrder struct {
 func (x *TokenMintOrder) Reset() {
 	*x = TokenMintOrder{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_Binance_proto_msgTypes[6]
+		mi := &file_Binance_proto_mTWTypes[6]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -503,7 +503,7 @@ func (x *TokenMintOrder) String() string {
 func (*TokenMintOrder) ProtoMessage() {}
 
 func (x *TokenMintOrder) ProtoReflect() protoreflect.Message {
-	mi := &file_Binance_proto_msgTypes[6]
+	mi := &file_Binance_proto_mTWTypes[6]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -554,7 +554,7 @@ type TokenBurnOrder struct {
 func (x *TokenBurnOrder) Reset() {
 	*x = TokenBurnOrder{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_Binance_proto_msgTypes[7]
+		mi := &file_Binance_proto_mTWTypes[7]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -567,7 +567,7 @@ func (x *TokenBurnOrder) String() string {
 func (*TokenBurnOrder) ProtoMessage() {}
 
 func (x *TokenBurnOrder) ProtoReflect() protoreflect.Message {
-	mi := &file_Binance_proto_msgTypes[7]
+	mi := &file_Binance_proto_mTWTypes[7]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -618,7 +618,7 @@ type TokenFreezeOrder struct {
 func (x *TokenFreezeOrder) Reset() {
 	*x = TokenFreezeOrder{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_Binance_proto_msgTypes[8]
+		mi := &file_Binance_proto_mTWTypes[8]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -631,7 +631,7 @@ func (x *TokenFreezeOrder) String() string {
 func (*TokenFreezeOrder) ProtoMessage() {}
 
 func (x *TokenFreezeOrder) ProtoReflect() protoreflect.Message {
-	mi := &file_Binance_proto_msgTypes[8]
+	mi := &file_Binance_proto_mTWTypes[8]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -682,7 +682,7 @@ type TokenUnfreezeOrder struct {
 func (x *TokenUnfreezeOrder) Reset() {
 	*x = TokenUnfreezeOrder{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_Binance_proto_msgTypes[9]
+		mi := &file_Binance_proto_mTWTypes[9]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -695,7 +695,7 @@ func (x *TokenUnfreezeOrder) String() string {
 func (*TokenUnfreezeOrder) ProtoMessage() {}
 
 func (x *TokenUnfreezeOrder) ProtoReflect() protoreflect.Message {
-	mi := &file_Binance_proto_msgTypes[9]
+	mi := &file_Binance_proto_mTWTypes[9]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -753,7 +753,7 @@ type HTLTOrder struct {
 func (x *HTLTOrder) Reset() {
 	*x = HTLTOrder{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_Binance_proto_msgTypes[10]
+		mi := &file_Binance_proto_mTWTypes[10]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -766,7 +766,7 @@ func (x *HTLTOrder) String() string {
 func (*HTLTOrder) ProtoMessage() {}
 
 func (x *HTLTOrder) ProtoReflect() protoreflect.Message {
-	mi := &file_Binance_proto_msgTypes[10]
+	mi := &file_Binance_proto_mTWTypes[10]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -866,7 +866,7 @@ type DepositHTLTOrder struct {
 func (x *DepositHTLTOrder) Reset() {
 	*x = DepositHTLTOrder{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_Binance_proto_msgTypes[11]
+		mi := &file_Binance_proto_mTWTypes[11]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -879,7 +879,7 @@ func (x *DepositHTLTOrder) String() string {
 func (*DepositHTLTOrder) ProtoMessage() {}
 
 func (x *DepositHTLTOrder) ProtoReflect() protoreflect.Message {
-	mi := &file_Binance_proto_msgTypes[11]
+	mi := &file_Binance_proto_mTWTypes[11]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -930,7 +930,7 @@ type ClaimHTLOrder struct {
 func (x *ClaimHTLOrder) Reset() {
 	*x = ClaimHTLOrder{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_Binance_proto_msgTypes[12]
+		mi := &file_Binance_proto_mTWTypes[12]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -943,7 +943,7 @@ func (x *ClaimHTLOrder) String() string {
 func (*ClaimHTLOrder) ProtoMessage() {}
 
 func (x *ClaimHTLOrder) ProtoReflect() protoreflect.Message {
-	mi := &file_Binance_proto_msgTypes[12]
+	mi := &file_Binance_proto_mTWTypes[12]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -993,7 +993,7 @@ type RefundHTLTOrder struct {
 func (x *RefundHTLTOrder) Reset() {
 	*x = RefundHTLTOrder{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_Binance_proto_msgTypes[13]
+		mi := &file_Binance_proto_mTWTypes[13]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1006,7 +1006,7 @@ func (x *RefundHTLTOrder) String() string {
 func (*RefundHTLTOrder) ProtoMessage() {}
 
 func (x *RefundHTLTOrder) ProtoReflect() protoreflect.Message {
-	mi := &file_Binance_proto_msgTypes[13]
+	mi := &file_Binance_proto_mTWTypes[13]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1050,7 +1050,7 @@ type TransferOut struct {
 func (x *TransferOut) Reset() {
 	*x = TransferOut{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_Binance_proto_msgTypes[14]
+		mi := &file_Binance_proto_mTWTypes[14]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1063,7 +1063,7 @@ func (x *TransferOut) String() string {
 func (*TransferOut) ProtoMessage() {}
 
 func (x *TransferOut) ProtoReflect() protoreflect.Message {
-	mi := &file_Binance_proto_msgTypes[14]
+	mi := &file_Binance_proto_mTWTypes[14]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1121,7 +1121,7 @@ type SideChainDelegate struct {
 func (x *SideChainDelegate) Reset() {
 	*x = SideChainDelegate{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_Binance_proto_msgTypes[15]
+		mi := &file_Binance_proto_mTWTypes[15]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1134,7 +1134,7 @@ func (x *SideChainDelegate) String() string {
 func (*SideChainDelegate) ProtoMessage() {}
 
 func (x *SideChainDelegate) ProtoReflect() protoreflect.Message {
-	mi := &file_Binance_proto_msgTypes[15]
+	mi := &file_Binance_proto_mTWTypes[15]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1193,7 +1193,7 @@ type SideChainRedelegate struct {
 func (x *SideChainRedelegate) Reset() {
 	*x = SideChainRedelegate{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_Binance_proto_msgTypes[16]
+		mi := &file_Binance_proto_mTWTypes[16]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1206,7 +1206,7 @@ func (x *SideChainRedelegate) String() string {
 func (*SideChainRedelegate) ProtoMessage() {}
 
 func (x *SideChainRedelegate) ProtoReflect() protoreflect.Message {
-	mi := &file_Binance_proto_msgTypes[16]
+	mi := &file_Binance_proto_mTWTypes[16]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1271,7 +1271,7 @@ type SideChainUndelegate struct {
 func (x *SideChainUndelegate) Reset() {
 	*x = SideChainUndelegate{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_Binance_proto_msgTypes[17]
+		mi := &file_Binance_proto_mTWTypes[17]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1284,7 +1284,7 @@ func (x *SideChainUndelegate) String() string {
 func (*SideChainUndelegate) ProtoMessage() {}
 
 func (x *SideChainUndelegate) ProtoReflect() protoreflect.Message {
-	mi := &file_Binance_proto_msgTypes[17]
+	mi := &file_Binance_proto_mTWTypes[17]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1343,7 +1343,7 @@ type TimeLockOrder struct {
 func (x *TimeLockOrder) Reset() {
 	*x = TimeLockOrder{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_Binance_proto_msgTypes[18]
+		mi := &file_Binance_proto_mTWTypes[18]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1356,7 +1356,7 @@ func (x *TimeLockOrder) String() string {
 func (*TimeLockOrder) ProtoMessage() {}
 
 func (x *TimeLockOrder) ProtoReflect() protoreflect.Message {
-	mi := &file_Binance_proto_msgTypes[18]
+	mi := &file_Binance_proto_mTWTypes[18]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1416,7 +1416,7 @@ type TimeRelockOrder struct {
 func (x *TimeRelockOrder) Reset() {
 	*x = TimeRelockOrder{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_Binance_proto_msgTypes[19]
+		mi := &file_Binance_proto_mTWTypes[19]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1429,7 +1429,7 @@ func (x *TimeRelockOrder) String() string {
 func (*TimeRelockOrder) ProtoMessage() {}
 
 func (x *TimeRelockOrder) ProtoReflect() protoreflect.Message {
-	mi := &file_Binance_proto_msgTypes[19]
+	mi := &file_Binance_proto_mTWTypes[19]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1492,7 +1492,7 @@ type TimeUnlockOrder struct {
 func (x *TimeUnlockOrder) Reset() {
 	*x = TimeUnlockOrder{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_Binance_proto_msgTypes[20]
+		mi := &file_Binance_proto_mTWTypes[20]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1505,7 +1505,7 @@ func (x *TimeUnlockOrder) String() string {
 func (*TimeUnlockOrder) ProtoMessage() {}
 
 func (x *TimeUnlockOrder) ProtoReflect() protoreflect.Message {
-	mi := &file_Binance_proto_msgTypes[20]
+	mi := &file_Binance_proto_mTWTypes[20]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1573,7 +1573,7 @@ type SigningInput struct {
 func (x *SigningInput) Reset() {
 	*x = SigningInput{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_Binance_proto_msgTypes[21]
+		mi := &file_Binance_proto_mTWTypes[21]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1586,7 +1586,7 @@ func (x *SigningInput) String() string {
 func (*SigningInput) ProtoMessage() {}
 
 func (x *SigningInput) ProtoReflect() protoreflect.Message {
-	mi := &file_Binance_proto_msgTypes[21]
+	mi := &file_Binance_proto_mTWTypes[21]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1919,7 +1919,7 @@ type SigningOutput struct {
 func (x *SigningOutput) Reset() {
 	*x = SigningOutput{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_Binance_proto_msgTypes[22]
+		mi := &file_Binance_proto_mTWTypes[22]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1932,7 +1932,7 @@ func (x *SigningOutput) String() string {
 func (*SigningOutput) ProtoMessage() {}
 
 func (x *SigningOutput) ProtoReflect() protoreflect.Message {
-	mi := &file_Binance_proto_msgTypes[22]
+	mi := &file_Binance_proto_mTWTypes[22]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1978,7 +1978,7 @@ type Signature_PubKey struct {
 func (x *Signature_PubKey) Reset() {
 	*x = Signature_PubKey{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_Binance_proto_msgTypes[23]
+		mi := &file_Binance_proto_mTWTypes[23]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1991,7 +1991,7 @@ func (x *Signature_PubKey) String() string {
 func (*Signature_PubKey) ProtoMessage() {}
 
 func (x *Signature_PubKey) ProtoReflect() protoreflect.Message {
-	mi := &file_Binance_proto_msgTypes[23]
+	mi := &file_Binance_proto_mTWTypes[23]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2021,7 +2021,7 @@ type SendOrder_Token struct {
 func (x *SendOrder_Token) Reset() {
 	*x = SendOrder_Token{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_Binance_proto_msgTypes[24]
+		mi := &file_Binance_proto_mTWTypes[24]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -2034,7 +2034,7 @@ func (x *SendOrder_Token) String() string {
 func (*SendOrder_Token) ProtoMessage() {}
 
 func (x *SendOrder_Token) ProtoReflect() protoreflect.Message {
-	mi := &file_Binance_proto_msgTypes[24]
+	mi := &file_Binance_proto_mTWTypes[24]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2076,7 +2076,7 @@ type SendOrder_Input struct {
 func (x *SendOrder_Input) Reset() {
 	*x = SendOrder_Input{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_Binance_proto_msgTypes[25]
+		mi := &file_Binance_proto_mTWTypes[25]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -2089,7 +2089,7 @@ func (x *SendOrder_Input) String() string {
 func (*SendOrder_Input) ProtoMessage() {}
 
 func (x *SendOrder_Input) ProtoReflect() protoreflect.Message {
-	mi := &file_Binance_proto_msgTypes[25]
+	mi := &file_Binance_proto_mTWTypes[25]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2131,7 +2131,7 @@ type SendOrder_Output struct {
 func (x *SendOrder_Output) Reset() {
 	*x = SendOrder_Output{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_Binance_proto_msgTypes[26]
+		mi := &file_Binance_proto_mTWTypes[26]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -2144,7 +2144,7 @@ func (x *SendOrder_Output) String() string {
 func (*SendOrder_Output) ProtoMessage() {}
 
 func (x *SendOrder_Output) ProtoReflect() protoreflect.Message {
-	mi := &file_Binance_proto_msgTypes[26]
+	mi := &file_Binance_proto_mTWTypes[26]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2516,12 +2516,12 @@ var (
 
 func file_Binance_proto_rawDescGZIP() []byte {
 	file_Binance_proto_rawDescOnce.Do(func() {
-		file_Binance_proto_rawDescData = protoimpl.X.CompressGZIP(file_Binance_proto_rawDescData)
+		file_Binance_proto_rawDescData = protoimpl.X.CompresTWZIP(file_Binance_proto_rawDescData)
 	})
 	return file_Binance_proto_rawDescData
 }
 
-var file_Binance_proto_msgTypes = make([]protoimpl.MessageInfo, 27)
+var file_Binance_proto_mTWTypes = make([]protoimpl.MessageInfo, 27)
 var file_Binance_proto_goTypes = []interface{}{
 	(*Transaction)(nil),         // 0: TW.Binance.Proto.Transaction
 	(*Signature)(nil),           // 1: TW.Binance.Proto.Signature
@@ -2598,7 +2598,7 @@ func file_Binance_proto_init() {
 		return
 	}
 	if !protoimpl.UnsafeEnabled {
-		file_Binance_proto_msgTypes[0].Exporter = func(v interface{}, i int) interface{} {
+		file_Binance_proto_mTWTypes[0].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*Transaction); i {
 			case 0:
 				return &v.state
@@ -2610,7 +2610,7 @@ func file_Binance_proto_init() {
 				return nil
 			}
 		}
-		file_Binance_proto_msgTypes[1].Exporter = func(v interface{}, i int) interface{} {
+		file_Binance_proto_mTWTypes[1].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*Signature); i {
 			case 0:
 				return &v.state
@@ -2622,7 +2622,7 @@ func file_Binance_proto_init() {
 				return nil
 			}
 		}
-		file_Binance_proto_msgTypes[2].Exporter = func(v interface{}, i int) interface{} {
+		file_Binance_proto_mTWTypes[2].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*TradeOrder); i {
 			case 0:
 				return &v.state
@@ -2634,7 +2634,7 @@ func file_Binance_proto_init() {
 				return nil
 			}
 		}
-		file_Binance_proto_msgTypes[3].Exporter = func(v interface{}, i int) interface{} {
+		file_Binance_proto_mTWTypes[3].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*CancelTradeOrder); i {
 			case 0:
 				return &v.state
@@ -2646,7 +2646,7 @@ func file_Binance_proto_init() {
 				return nil
 			}
 		}
-		file_Binance_proto_msgTypes[4].Exporter = func(v interface{}, i int) interface{} {
+		file_Binance_proto_mTWTypes[4].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*SendOrder); i {
 			case 0:
 				return &v.state
@@ -2658,7 +2658,7 @@ func file_Binance_proto_init() {
 				return nil
 			}
 		}
-		file_Binance_proto_msgTypes[5].Exporter = func(v interface{}, i int) interface{} {
+		file_Binance_proto_mTWTypes[5].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*TokenIssueOrder); i {
 			case 0:
 				return &v.state
@@ -2670,7 +2670,7 @@ func file_Binance_proto_init() {
 				return nil
 			}
 		}
-		file_Binance_proto_msgTypes[6].Exporter = func(v interface{}, i int) interface{} {
+		file_Binance_proto_mTWTypes[6].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*TokenMintOrder); i {
 			case 0:
 				return &v.state
@@ -2682,7 +2682,7 @@ func file_Binance_proto_init() {
 				return nil
 			}
 		}
-		file_Binance_proto_msgTypes[7].Exporter = func(v interface{}, i int) interface{} {
+		file_Binance_proto_mTWTypes[7].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*TokenBurnOrder); i {
 			case 0:
 				return &v.state
@@ -2694,7 +2694,7 @@ func file_Binance_proto_init() {
 				return nil
 			}
 		}
-		file_Binance_proto_msgTypes[8].Exporter = func(v interface{}, i int) interface{} {
+		file_Binance_proto_mTWTypes[8].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*TokenFreezeOrder); i {
 			case 0:
 				return &v.state
@@ -2706,7 +2706,7 @@ func file_Binance_proto_init() {
 				return nil
 			}
 		}
-		file_Binance_proto_msgTypes[9].Exporter = func(v interface{}, i int) interface{} {
+		file_Binance_proto_mTWTypes[9].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*TokenUnfreezeOrder); i {
 			case 0:
 				return &v.state
@@ -2718,7 +2718,7 @@ func file_Binance_proto_init() {
 				return nil
 			}
 		}
-		file_Binance_proto_msgTypes[10].Exporter = func(v interface{}, i int) interface{} {
+		file_Binance_proto_mTWTypes[10].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*HTLTOrder); i {
 			case 0:
 				return &v.state
@@ -2730,7 +2730,7 @@ func file_Binance_proto_init() {
 				return nil
 			}
 		}
-		file_Binance_proto_msgTypes[11].Exporter = func(v interface{}, i int) interface{} {
+		file_Binance_proto_mTWTypes[11].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*DepositHTLTOrder); i {
 			case 0:
 				return &v.state
@@ -2742,7 +2742,7 @@ func file_Binance_proto_init() {
 				return nil
 			}
 		}
-		file_Binance_proto_msgTypes[12].Exporter = func(v interface{}, i int) interface{} {
+		file_Binance_proto_mTWTypes[12].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*ClaimHTLOrder); i {
 			case 0:
 				return &v.state
@@ -2754,7 +2754,7 @@ func file_Binance_proto_init() {
 				return nil
 			}
 		}
-		file_Binance_proto_msgTypes[13].Exporter = func(v interface{}, i int) interface{} {
+		file_Binance_proto_mTWTypes[13].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*RefundHTLTOrder); i {
 			case 0:
 				return &v.state
@@ -2766,7 +2766,7 @@ func file_Binance_proto_init() {
 				return nil
 			}
 		}
-		file_Binance_proto_msgTypes[14].Exporter = func(v interface{}, i int) interface{} {
+		file_Binance_proto_mTWTypes[14].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*TransferOut); i {
 			case 0:
 				return &v.state
@@ -2778,7 +2778,7 @@ func file_Binance_proto_init() {
 				return nil
 			}
 		}
-		file_Binance_proto_msgTypes[15].Exporter = func(v interface{}, i int) interface{} {
+		file_Binance_proto_mTWTypes[15].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*SideChainDelegate); i {
 			case 0:
 				return &v.state
@@ -2790,7 +2790,7 @@ func file_Binance_proto_init() {
 				return nil
 			}
 		}
-		file_Binance_proto_msgTypes[16].Exporter = func(v interface{}, i int) interface{} {
+		file_Binance_proto_mTWTypes[16].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*SideChainRedelegate); i {
 			case 0:
 				return &v.state
@@ -2802,7 +2802,7 @@ func file_Binance_proto_init() {
 				return nil
 			}
 		}
-		file_Binance_proto_msgTypes[17].Exporter = func(v interface{}, i int) interface{} {
+		file_Binance_proto_mTWTypes[17].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*SideChainUndelegate); i {
 			case 0:
 				return &v.state
@@ -2814,7 +2814,7 @@ func file_Binance_proto_init() {
 				return nil
 			}
 		}
-		file_Binance_proto_msgTypes[18].Exporter = func(v interface{}, i int) interface{} {
+		file_Binance_proto_mTWTypes[18].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*TimeLockOrder); i {
 			case 0:
 				return &v.state
@@ -2826,7 +2826,7 @@ func file_Binance_proto_init() {
 				return nil
 			}
 		}
-		file_Binance_proto_msgTypes[19].Exporter = func(v interface{}, i int) interface{} {
+		file_Binance_proto_mTWTypes[19].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*TimeRelockOrder); i {
 			case 0:
 				return &v.state
@@ -2838,7 +2838,7 @@ func file_Binance_proto_init() {
 				return nil
 			}
 		}
-		file_Binance_proto_msgTypes[20].Exporter = func(v interface{}, i int) interface{} {
+		file_Binance_proto_mTWTypes[20].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*TimeUnlockOrder); i {
 			case 0:
 				return &v.state
@@ -2850,7 +2850,7 @@ func file_Binance_proto_init() {
 				return nil
 			}
 		}
-		file_Binance_proto_msgTypes[21].Exporter = func(v interface{}, i int) interface{} {
+		file_Binance_proto_mTWTypes[21].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*SigningInput); i {
 			case 0:
 				return &v.state
@@ -2862,7 +2862,7 @@ func file_Binance_proto_init() {
 				return nil
 			}
 		}
-		file_Binance_proto_msgTypes[22].Exporter = func(v interface{}, i int) interface{} {
+		file_Binance_proto_mTWTypes[22].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*SigningOutput); i {
 			case 0:
 				return &v.state
@@ -2874,7 +2874,7 @@ func file_Binance_proto_init() {
 				return nil
 			}
 		}
-		file_Binance_proto_msgTypes[23].Exporter = func(v interface{}, i int) interface{} {
+		file_Binance_proto_mTWTypes[23].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*Signature_PubKey); i {
 			case 0:
 				return &v.state
@@ -2886,7 +2886,7 @@ func file_Binance_proto_init() {
 				return nil
 			}
 		}
-		file_Binance_proto_msgTypes[24].Exporter = func(v interface{}, i int) interface{} {
+		file_Binance_proto_mTWTypes[24].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*SendOrder_Token); i {
 			case 0:
 				return &v.state
@@ -2898,7 +2898,7 @@ func file_Binance_proto_init() {
 				return nil
 			}
 		}
-		file_Binance_proto_msgTypes[25].Exporter = func(v interface{}, i int) interface{} {
+		file_Binance_proto_mTWTypes[25].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*SendOrder_Input); i {
 			case 0:
 				return &v.state
@@ -2910,7 +2910,7 @@ func file_Binance_proto_init() {
 				return nil
 			}
 		}
-		file_Binance_proto_msgTypes[26].Exporter = func(v interface{}, i int) interface{} {
+		file_Binance_proto_mTWTypes[26].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*SendOrder_Output); i {
 			case 0:
 				return &v.state
@@ -2923,7 +2923,7 @@ func file_Binance_proto_init() {
 			}
 		}
 	}
-	file_Binance_proto_msgTypes[21].OneofWrappers = []interface{}{
+	file_Binance_proto_mTWTypes[21].OneofWrappers = []interface{}{
 		(*SigningInput_TradeOrder)(nil),
 		(*SigningInput_CancelTradeOrder)(nil),
 		(*SigningInput_SendOrder)(nil),
@@ -2956,7 +2956,7 @@ func file_Binance_proto_init() {
 		},
 		GoTypes:           file_Binance_proto_goTypes,
 		DependencyIndexes: file_Binance_proto_depIdxs,
-		MessageInfos:      file_Binance_proto_msgTypes,
+		MessageInfos:      file_Binance_proto_mTWTypes,
 	}.Build()
 	File_Binance_proto = out.File
 	file_Binance_proto_rawDesc = nil

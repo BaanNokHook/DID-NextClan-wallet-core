@@ -40,7 +40,7 @@ const char *_Nonnull TWStringUTF8Bytes(TWString *_Nonnull string) TW_VISIBILITY_
 /// Deletes a string created with a `TWStringCreate*` method.  After delete it must not be used (can segfault)!
 void TWStringDelete(TWString *_Nonnull string) TW_VISIBILITY_DEFAULT;
 
-/// Determines whether two string blocks are equal.
+/// Determines whether TWo string blocks are equal.
 bool TWStringEqual(TWString *_Nonnull lhs, TWString *_Nonnull rhs) TW_VISIBILITY_DEFAULT;
 
 TW_EXTERN_C_END

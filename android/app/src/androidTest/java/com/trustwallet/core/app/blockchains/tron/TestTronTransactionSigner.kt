@@ -1,20 +1,20 @@
-package com.trustwallet.core.app.blockchains.tron
+package com.trusTWallet.core.app.blockchains.tron
 
 import com.google.protobuf.ByteString
-import com.trustwallet.core.app.utils.toHexByteArray
+import com.trusTWallet.core.app.utils.toHexByteArray
 import org.junit.Assert.assertEquals
 import org.junit.Test
 import wallet.core.java.AnySigner
 import wallet.core.jni.proto.Tron
 import wallet.core.jni.proto.Tron.SigningOutput
-import com.trustwallet.core.app.utils.Numeric
+import com.trusTWallet.core.app.utils.Numeric
 import org.junit.Assert.assertArrayEquals
 import wallet.core.jni.CoinType.TRON
 
 class TestTronTransactionSigner {
 
     init {
-        System.loadLibrary("TrustWalletCore")
+        System.loadLibrary("TrusTWalletCore")
     }
 
     @Test
@@ -31,7 +31,7 @@ class TestTronTransactionSigner {
             .setTxTrieRoot(ByteString.copyFrom("0x64288c2db0641316762a99dbb02ef7c90f968b60f9f2e410835980614332f86d".toHexByteArray()))
             .setParentHash(ByteString.copyFrom("0x00000000002f7b3af4f5f8b9e23a30c530f719f165b742e7358536b280eead2d".toHexByteArray()))
             .setNumber(3111739)
-            .setWitnessAddress(ByteString.copyFrom("0x415863f6091b8e71766da808b1dd3159790f61de7d".toHexByteArray()))
+            .seTWitnessAddress(ByteString.copyFrom("0x415863f6091b8e71766da808b1dd3159790f61de7d".toHexByteArray()))
             .setVersion(3)
             .build()
 

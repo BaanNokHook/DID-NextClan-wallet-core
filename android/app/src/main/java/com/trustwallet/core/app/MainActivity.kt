@@ -1,4 +1,4 @@
-package com.trustwallet.core.app
+package com.trusTWallet.core.app
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

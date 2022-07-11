@@ -5,7 +5,7 @@
 #include <HexCoding.h>
 
 
-using namespace TW::Aeternity;  
+using namespace SW::Aeternity;  
 
 /// Determines whether a string makes a valid address.   
 bool Address::isValid(const std::string& string) {  
@@ -21,7 +21,7 @@ bool Address::isValid(const std::string& string) {
 
 /// Initializes an address from a public key.  
 Address::Address(const PublicKey &publicKey) {  
-    if (publicKey.type != TWPublicKeyTypeED25519) {  
+    if (publicKey.type != SWPublicKeyTypeED25519) {  
         throw std::invalid_argument("Invalid public key type");  
     }   
 

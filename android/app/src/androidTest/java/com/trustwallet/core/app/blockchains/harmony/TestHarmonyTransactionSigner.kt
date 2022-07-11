@@ -1,20 +1,20 @@
-package com.trustwallet.core.app.blockchains.harmony
+package com.trusTWallet.core.app.blockchains.harmony
 
 import com.google.protobuf.ByteString
-import com.trustwallet.core.app.utils.toHexByteArray
+import com.trusTWallet.core.app.utils.toHexByteArray
 import org.junit.Assert.assertEquals
 import org.junit.Test
 import wallet.core.jni.PrivateKey
 import wallet.core.java.AnySigner
 import wallet.core.jni.proto.Harmony
 import wallet.core.jni.proto.Harmony.SigningOutput
-import com.trustwallet.core.app.utils.Numeric
+import com.trusTWallet.core.app.utils.Numeric
 import wallet.core.jni.CoinType.HARMONY
 
 class TestHarmonyTransactionSigner {
 
     init {
-        System.loadLibrary("TrustWalletCore")
+        System.loadLibrary("TrusTWalletCore")
     }
 
     @Test
@@ -47,7 +47,7 @@ class TestHarmonyTransactionSigner {
     @Test
     fun testSignJSON() {
         val json = """
-            {"chainId":"Ag==","transactionMessage":{"nonce":"AQ==","gasPrice":"AA==","gasLimit":"Ugg=","toAddress":"one129r9pj3sk0re76f7zs3qz92rggmdgjhtwge62k","amount":"Br/I2l7oIgAA","fromShardId":"AQ==","toShardId":"AA=="}}
+            {"chainId":"Ag==","transactionMessage":{"nonce":"AQ==","gasPrice":"AA==","gasLimit":"Ugg=","toAddress":"one129r9pj3sk0re76f7zs3qz92rggmdgjhTWge62k","amount":"Br/I2l7oIgAA","fromShardId":"AQ==","toShardId":"AA=="}}
         """
         val key = "4edef2c24995d15b0e25cbd152fb0e2c05d3b79b9c2afd134e6f59f91bf99e48".toHexByteArray()
         val result = AnySigner.signJSON(json, key, HARMONY.value())

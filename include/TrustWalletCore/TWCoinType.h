@@ -53,7 +53,7 @@ enum TWCoinType {
     TWCoinTypeNEAR = 397,
     TWCoinTypeNimiq = 242,
     TWCoinTypeOntology = 1024,
-    TWCoinTypePOANetwork = 178,
+    TWCoinTypePOANeTWork = 178,
     TWCoinTypeQtum = 2301,
     TWCoinTypeXRP = 144,
     TWCoinTypeSolana = 501,

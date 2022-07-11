@@ -1,17 +1,17 @@
-package com.trustwallet.core.app.blockchains.binance
+package com.trusTWallet.core.app.blockchains.binance
 
-import com.trustwallet.core.app.utils.toHexBytes
+import com.trusTWallet.core.app.utils.toHexBytes
 import org.junit.Assert.assertEquals
 import org.junit.Test
 import wallet.core.jni.*
-import com.trustwallet.core.app.utils.toHex
+import com.trusTWallet.core.app.utils.toHex
 import wallet.core.jni.CoinType.BINANCE
 import wallet.core.java.AnySigner
 
 class TestBinanceAddress {
 
     init {
-        System.loadLibrary("TrustWalletCore")
+        System.loadLibrary("TrusTWalletCore")
     }
 
     @Test

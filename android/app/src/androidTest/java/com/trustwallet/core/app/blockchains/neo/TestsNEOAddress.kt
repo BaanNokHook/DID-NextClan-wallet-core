@@ -4,9 +4,9 @@
 // terms governing use, modification, and redistribution, is contained in the
 // file LICENSE at the root of the source code distribution tree.
 
-package com.trustwallet.core.app.blockchains.neo
+package com.trusTWallet.core.app.blockchains.neo
 
-import com.trustwallet.core.app.utils.Numeric
+import com.trusTWallet.core.app.utils.Numeric
 import org.junit.Assert.assertEquals
 import org.junit.Test
 import wallet.core.jni.*
@@ -15,7 +15,7 @@ import wallet.core.jni.AnyAddress
 class TestNEOAddress {
 
     init {
-        System.loadLibrary("TrustWalletCore")
+        System.loadLibrary("TrusTWalletCore")
     }
 
     @Test

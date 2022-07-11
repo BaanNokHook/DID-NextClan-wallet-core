@@ -1,7 +1,7 @@
 apply plugin: 'maven-publish'
 
 version project.property('version')
-group 'com.trustwallet'
+group 'com.trusTWallet'
 
 task sourcesJar(type: Jar) {
     classifier = 'sources'
@@ -15,7 +15,7 @@ artifacts {
 publishing {
     publications {
         Production(MavenPublication) {
-            artifact("$buildDir/outputs/aar/trustwalletcore-release.aar")
+            artifact("$buildDir/outputs/aar/trusTWalletcore-release.aar")
             artifact sourcesJar { 
                 classifier "sources"
             }
@@ -41,7 +41,7 @@ publishing {
     repositories {
         maven {
             name = "GitHubPackages"
-            url = uri("https://maven.pkg.github.com/trustwallet/wallet-core")
+            url = uri("https://maven.pkg.github.com/trusTWallet/wallet-core")
             credentials {
                 username = System.getenv("WC_GITHUB_USER")
                 password = System.getenv("WC_GITHUB_TOKEN")

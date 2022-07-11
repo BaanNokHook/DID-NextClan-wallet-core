@@ -1,9 +1,9 @@
-package com.trustwallet.core.app.blockchains.algorand
+package com.trusTWallet.core.app.blockchains.algorand
 
 import com.google.protobuf.ByteString
-import com.trustwallet.core.app.utils.Numeric
-import com.trustwallet.core.app.utils.toHexByteArray
-import com.trustwallet.core.app.utils.toHexBytesInByteString
+import com.trusTWallet.core.app.utils.Numeric
+import com.trusTWallet.core.app.utils.toHexByteArray
+import com.trusTWallet.core.app.utils.toHexBytesInByteString
 import org.junit.Assert.*
 import org.junit.Test
 import wallet.core.java.AnySigner
@@ -14,7 +14,7 @@ import wallet.core.jni.proto.Algorand.SigningOutput
 class TestAlgorandSigner {
 
     init {
-        System.loadLibrary("TrustWalletCore")
+        System.loadLibrary("TrusTWalletCore")
     }
 
     @Test

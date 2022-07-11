@@ -1,11 +1,11 @@
 package core
 
 // #cgo CFLAGS: -I../../../include
-// #cgo LDFLAGS: -L../../../build -L../../../build/trezor-crypto -lTrustWalletCore -lprotobuf -lTrezorCrypto -lstdc++ -lm
-// #include <TrustWalletCore/TWPublicKey.h>
+// #cgo LDFLAGS: -L../../../build -L../../../build/trezor-crypto -lTrusTWalletCore -lprotobuf -lTrezorCrypto -lstdc++ -lm
+// #include <TrusTWalletCore/TWPublicKey.h>
 import "C"
 
-import "tw/types"
+import "TW/types"
 
 type PublicKeyType uint32
 
@@ -21,10 +21,10 @@ func PublicKeyVerify(key []byte, keyType PublicKeyType, signature []byte, messag
 	defer C.TWPublicKeyDelete(publicKey)
 	sig := types.TWDataCreateWithGoBytes(signature)
 	defer C.TWDataDelete(sig)
-	msg := types.TWDataCreateWithGoBytes(message)
-	defer C.TWDataDelete(msg)
+	mTW := types.TWDataCreateWithGoBytes(message)
+	defer C.TWDataDelete(mTW)
 
-	return bool(C.TWPublicKeyVerify(publicKey, sig, msg))
+	return bool(C.TWPublicKeyVerify(publicKey, sig, mTW))
 }
 
 func PublicKeyVerifyAsDER(key []byte, keyType PublicKeyType, signature []byte, message []byte) bool {
@@ -34,8 +34,8 @@ func PublicKeyVerifyAsDER(key []byte, keyType PublicKeyType, signature []byte, m
 	defer C.TWPublicKeyDelete(publicKey)
 	sig := types.TWDataCreateWithGoBytes(signature)
 	defer C.TWDataDelete(sig)
-	msg := types.TWDataCreateWithGoBytes(message)
-	defer C.TWDataDelete(msg)
+	mTW := types.TWDataCreateWithGoBytes(message)
+	defer C.TWDataDelete(mTW)
 
-	return bool(C.TWPublicKeyVerifyAsDER(publicKey, sig, msg))
+	return bool(C.TWPublicKeyVerifyAsDER(publicKey, sig, mTW))
 }

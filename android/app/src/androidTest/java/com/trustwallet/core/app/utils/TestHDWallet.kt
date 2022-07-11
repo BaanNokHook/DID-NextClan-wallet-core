@@ -1,6 +1,6 @@
-package com.trustwallet.core.app.utils
+package com.trusTWallet.core.app.utils
 
-import com.trustwallet.core.app.utils.Numeric
+import com.trusTWallet.core.app.utils.Numeric
 import wallet.core.jni.CoinType
 import wallet.core.jni.Curve
 import wallet.core.jni.HDVersion
@@ -16,7 +16,7 @@ import org.junit.Test
 
 class TestHDWallet {
     init {
-        System.loadLibrary("TrustWalletCore");
+        System.loadLibrary("TrusTWalletCore");
     }
 
     val words =
@@ -39,7 +39,7 @@ class TestHDWallet {
 
     @Test
     fun testCreateFromSpanishMnemonic() {
-        val mnemonic = "llanto radical atraer riesgo actuar masa fondo cielo dieta archivo sonrisa mamut"
+        val mnemonic = "llanto radical atraer rieTWo actuar masa fondo cielo dieta archivo sonrisa mamut"
         try {
             HDWallet(mnemonic, "")
             fail("Missing exception")
@@ -103,7 +103,7 @@ class TestHDWallet {
         val yprv = wallet.getExtendedPrivateKey(Purpose.BIP49, CoinType.BITCOIN, HDVersion.YPRV)
         val ypub = wallet.getExtendedPublicKey(Purpose.BIP49, CoinType.BITCOIN, HDVersion.YPUB)
         assertEquals(yprv, "yprvAHwhK6RbpuS3dgCYHM5jc2ZvEKd7Bi61u9FVhYMpgMSuZS613T1xxQeKTffhrHY79hZ5PsskBjcc6C2V7DrnsMsNaGDaWev3GLRQRgV7hxF");
-        assertEquals(ypub, "ypub6Ww3ibxVfGzLrAH1PNcjyAWenMTbbAosGNB6VvmSEgytSER9azLDWCxoJwW7Ke7icmizBMXrzBx9979FfaHxHcrArf3zbeJJJUZPf663zsP");
+        assertEquals(ypub, "ypub6Ww3ibxVfGzLrAH1PNcjyAWenMTbbAoTWNB6VvmSEgytSER9azLDWCxoJwW7Ke7icmizBMXrzBx9979FfaHxHcrArf3zbeJJJUZPf663zsP");
 
         val zprv = wallet.getExtendedPrivateKey(Purpose.BIP84, CoinType.BITCOIN, HDVersion.ZPRV)
         val zpub = wallet.getExtendedPublicKey(Purpose.BIP84, CoinType.BITCOIN, HDVersion.ZPUB)
@@ -141,7 +141,7 @@ class TestHDWallet {
     }
 
     @Test
-    fun testInitHDWalletWithPhrase() {
+    fun testInitHDWalleTWithPhrase() {
         val hdWallet = HDWallet(words, "")
         assertEquals(hdWallet.mnemonic(), words)
     }

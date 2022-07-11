@@ -1,9 +1,3 @@
-// Copyright © 2017-2020 Trust Wallet.
-//
-// This file is part of Trust. The full Trust copyright notice, including
-// terms governing use, modification, and redistribution, is contained in the
-// file LICENSE at the root of the source code distribution tree.
-
 #include "Transaction.h"
 #include "Identifiers.h"
 #include <Base58.h>
@@ -14,6 +8,9 @@ using namespace TW;
 using namespace TW::Aeternity;
 
 /// RLP returns a byte serialized representation
+
+
+////#######################////////////#######################///////////////#######################//////////////
 Data Transaction::encode() {
     auto encoded = Data();
     append(encoded, Ethereum::RLP::encode(Identifiers::objectTagSpendTransaction));

@@ -4,10 +4,10 @@
 // terms governing use, modification, and redistribution, is contained in the
 // file LICENSE at the root of the source code distribution tree.
 
-package com.trustwallet.core.app.blockchains.oasis
+package com.trusTWallet.core.app.blockchains.oasis
 
 import com.google.protobuf.ByteString
-import com.trustwallet.core.app.utils.Numeric
+import com.trusTWallet.core.app.utils.Numeric
 import org.junit.Test
 import org.junit.Assert.assertEquals
 import wallet.core.java.AnySigner
@@ -18,14 +18,14 @@ import wallet.core.jni.proto.Oasis.SigningOutput
 class TestOasisSigner {
 
     init {
-        System.loadLibrary("TrustWalletCore")
+        System.loadLibrary("TrusTWalletCore")
     }
 
     @Test
     fun OasisTransactionSigning() {
-        val transferMsg = Oasis.TransferMessage.newBuilder()
+        val transferMTW = Oasis.TransferMessage.newBuilder()
 
-        transferMsg.apply {
+        transferMTW.apply {
             to = "oasis1qrrnesqpgc6rfy2m50eew5d7klqfqk69avhv4ak5"
             gasPrice = 0
 
@@ -40,7 +40,7 @@ class TestOasisSigner {
         val signingInput = Oasis.SigningInput.newBuilder()
         signingInput.apply {
             privateKey = (ByteString.copyFrom(Numeric.hexStringToByteArray("4f8b5676990b00e23d9904a92deb8d8f428ff289c8939926358f1d20537c21a0")))
-            transfer = transferMsg.build()
+            transfer = transferMTW.build()
         }
 
         val output = AnySigner.sign(signingInput.build(), OASIS, SigningOutput.parser())

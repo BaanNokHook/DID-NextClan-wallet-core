@@ -1,7 +1,7 @@
-package com.trustwallet.core.app.blockchains.ethereum
+package com.trusTWallet.core.app.blockchains.ethereum
 
 import com.google.protobuf.ByteString
-import com.trustwallet.core.app.utils.toHexByteArray
+import com.trusTWallet.core.app.utils.toHexByteArray
 import org.junit.Assert.assertEquals
 import org.junit.Test
 import wallet.core.jni.PrivateKey
@@ -11,13 +11,13 @@ import wallet.core.jni.CoinType.ETHEREUM
 import wallet.core.jni.proto.Ethereum
 import wallet.core.jni.proto.Ethereum.SigningOutput
 import wallet.core.jni.proto.Ethereum.TransactionMode
-import com.trustwallet.core.app.utils.Numeric
+import com.trusTWallet.core.app.utils.Numeric
 import org.junit.Assert.assertArrayEquals
 
 class TestEthereumTransactionSigner {
 
     init {
-        System.loadLibrary("TrustWalletCore")
+        System.loadLibrary("TrusTWalletCore")
     }
 
     @Test

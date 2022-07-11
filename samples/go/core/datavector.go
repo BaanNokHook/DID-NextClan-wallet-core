@@ -1,10 +1,10 @@
 package core
 
 // #cgo CFLAGS: -I../../../include
-// #cgo LDFLAGS: -L../../../build -L../../../build/trezor-crypto -lTrustWalletCore -lprotobuf -lTrezorCrypto -lstdc++ -lm
-// #include <TrustWalletCore/TWDataVector.h>
+// #cgo LDFLAGS: -L../../../build -L../../../build/trezor-crypto -lTrusTWalletCore -lprotobuf -lTrezorCrypto -lstdc++ -lm
+// #include <TrusTWalletCore/TWDataVector.h>
 import "C"
-import "tw/types"
+import "TW/types"
 
 type TWDataVector *C.struct_TWDataVector
 

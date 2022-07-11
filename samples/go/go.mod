@@ -1,4 +1,4 @@
-module tw
+module TW
 
 go 1.16
 

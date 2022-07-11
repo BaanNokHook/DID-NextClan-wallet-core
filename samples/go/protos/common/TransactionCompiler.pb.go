@@ -39,7 +39,7 @@ type PreSigningOutput struct {
 func (x *PreSigningOutput) Reset() {
 	*x = PreSigningOutput{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_TransactionCompiler_proto_msgTypes[0]
+		mi := &file_TransactionCompiler_proto_mTWTypes[0]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -52,7 +52,7 @@ func (x *PreSigningOutput) String() string {
 func (*PreSigningOutput) ProtoMessage() {}
 
 func (x *PreSigningOutput) ProtoReflect() protoreflect.Message {
-	mi := &file_TransactionCompiler_proto_msgTypes[0]
+	mi := &file_TransactionCompiler_proto_mTWTypes[0]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -128,12 +128,12 @@ var (
 
 func file_TransactionCompiler_proto_rawDescGZIP() []byte {
 	file_TransactionCompiler_proto_rawDescOnce.Do(func() {
-		file_TransactionCompiler_proto_rawDescData = protoimpl.X.CompressGZIP(file_TransactionCompiler_proto_rawDescData)
+		file_TransactionCompiler_proto_rawDescData = protoimpl.X.CompresTWZIP(file_TransactionCompiler_proto_rawDescData)
 	})
 	return file_TransactionCompiler_proto_rawDescData
 }
 
-var file_TransactionCompiler_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
+var file_TransactionCompiler_proto_mTWTypes = make([]protoimpl.MessageInfo, 1)
 var file_TransactionCompiler_proto_goTypes = []interface{}{
 	(*PreSigningOutput)(nil), // 0: TW.TxCompiler.Proto.PreSigningOutput
 	(SigningError)(0),        // 1: TW.Common.Proto.SigningError
@@ -154,7 +154,7 @@ func file_TransactionCompiler_proto_init() {
 	}
 	file_Common_proto_init()
 	if !protoimpl.UnsafeEnabled {
-		file_TransactionCompiler_proto_msgTypes[0].Exporter = func(v interface{}, i int) interface{} {
+		file_TransactionCompiler_proto_mTWTypes[0].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*PreSigningOutput); i {
 			case 0:
 				return &v.state
@@ -179,7 +179,7 @@ func file_TransactionCompiler_proto_init() {
 		},
 		GoTypes:           file_TransactionCompiler_proto_goTypes,
 		DependencyIndexes: file_TransactionCompiler_proto_depIdxs,
-		MessageInfos:      file_TransactionCompiler_proto_msgTypes,
+		MessageInfos:      file_TransactionCompiler_proto_mTWTypes,
 	}.Build()
 	File_TransactionCompiler_proto = out.File
 	file_TransactionCompiler_proto_rawDesc = nil

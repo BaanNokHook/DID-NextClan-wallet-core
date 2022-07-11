@@ -1,8 +1,8 @@
 package types
 
 // #cgo CFLAGS: -I../../../include
-// #cgo LDFLAGS: -L../../../build -L../../../build/trezor-crypto -lTrustWalletCore -lprotobuf -lTrezorCrypto -lstdc++ -lm
-// #include <TrustWalletCore/TWString.h>
+// #cgo LDFLAGS: -L../../../build -L../../../build/trezor-crypto -lTrusTWalletCore -lprotobuf -lTrezorCrypto -lstdc++ -lm
+// #include <TrusTWalletCore/TWString.h>
 import "C"
 
 import (

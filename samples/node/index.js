@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-const { TW, WalletCore } = require('@trustwallet/wallet-core');
+const { TW, WalletCore } = require('@trusTWallet/wallet-core');
 
 const sleep = async (milliseconds) => {
     await new Promise(resolve => setTimeout(resolve, milliseconds));

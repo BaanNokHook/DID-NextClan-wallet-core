@@ -1,18 +1,18 @@
-package com.trustwallet.core.app.blockchains.cosmos
+package com.trusTWallet.core.app.blockchains.cosmos
 
 import com.google.protobuf.ByteString
-import com.trustwallet.core.app.utils.toHexBytes
+import com.trusTWallet.core.app.utils.toHexBytes
 import org.junit.Assert.assertEquals
 import org.junit.Test
 import wallet.core.jni.*
-import com.trustwallet.core.app.utils.toHex
+import com.trusTWallet.core.app.utils.toHex
 import wallet.core.jni.CoinType.COSMOS
 import wallet.core.java.AnySigner
 
 class TestCosmosAddress {
 
     init {
-        System.loadLibrary("TrustWalletCore")
+        System.loadLibrary("TrusTWalletCore")
     }
 
     @Test
