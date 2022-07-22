@@ -9,8 +9,6 @@ using namespace TW::Aeternity;
 
 /// RLP returns a byte serialized representation
 
-
-////#######################////////////#######################///////////////#######################//////////////
 Data Transaction::encode() {
     auto encoded = Data();
     append(encoded, Ethereum::RLP::encode(Identifiers::objectTagSpendTransaction));
